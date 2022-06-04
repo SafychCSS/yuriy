@@ -1,0 +1,6 @@
+.idea
+.DS_Store
+node_modules
+package-lock.json
+dev/static/img/svg.zip
+dist
