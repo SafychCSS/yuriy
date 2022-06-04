@@ -52,7 +52,7 @@ const stylesBuild = () => {
         .pipe(dest('dist/static/css')) // сохраняем обычный (рабочий вариант)
         .pipe(csso()) // минифицируем
         .pipe(rename({suffix: '.min'})) // переименовываем
-        .pipe(dest('dist/static/css')) // минифицируем
+        .pipe(dest('dist/static/css'))
 }
 
 const stylesDev = () => {
@@ -121,9 +121,9 @@ const fonts = () => {
 // images
 const imagesDev = () => {
     return src([
-        'dev/static/img/**/*.{gif,png,jpg,svg}',
-        '!dev/static/img/icon-png/*.png',
-        '!dev/static/img/svg/*.svg'
+        'dev/static/img/**/*.{gif,png,jpg,svg,webp}',
+        // '!dev/static/img/icon-png/*.png',
+        // '!dev/static/img/svg/*.svg'
     ])
         .pipe(dest('dist/static/img/'));
 }
@@ -212,9 +212,12 @@ const createSpriteSvgBlack = () => {
 
 const serve = () => {
     browserSync.init({
+        port: 3001,
         server: {
-            baseDir: "./dist"
-        }
+            baseDir: "./dist",
+        },
+        online: true,
+        tunnel: true,
     })
 }
 
@@ -230,7 +233,7 @@ exports.default = series(
     parallel(stylesDev, scriptDev, html, fonts, imagesDev),
     parallel(watchFile, serve)
 );
-exports.build = series(clean, parallel(stylesBuild, scriptBuild, html, fonts, imagesBuild));
+exports.build = series(clean, parallel(stylesBuild, scriptBuild, html, fonts, imagesDev /*imagesBuild*/));
 
 exports.spritepng = createSpritePng;
 exports.spritesvgcolor = createSpriteSvgColor;
