@@ -1,7 +1,41 @@
-:root {
-    --main-color: #192A3E;
-    --accent-color: #019DA4;
-    --secondary-color: #333333;
-    --light-color: #8890A6;
-    --border-color: #ebeff2;
-}
+$colors: (
+    base: (
+        primary: #20203c, // main text
+        white: #fff,
+    ),
+    grays: (
+        primary: #7b8dab, // caption text, scroll
+        secondary: #b6c3d9, // more #hash
+        medium: #8e9fb7,
+        light: #e6e6e6,
+        light2: #f6f6f6,
+        semilight: #edf2f8, // main page bg
+        semilight2: #f3f4ff, // bg #hash
+        extralight: #f6faff, // elems bg (calendar, family, etc)
+        extralight2: #e9eff6, // inputs
+    ),
+    blue: (
+            primary: #405983, // social bg
+            light: #d3ecf4, // border more photo
+    ),
+    green: (
+            primary: #3bb288, // social text (mobile?)
+            light: #cce8de,
+    ),
+    yellow: (
+            primary: #ffdd83,
+    ),
+    red: (
+            primary: #ff5b65,
+    ),
+    purple: (
+        primary: #6b69ca, // link, some elems
+    )
+);
+
+$btn-shadow: 0 10px 28px rgba(255, 221, 131, 0.55);
+$radius-xxs: 7px;
+$radius-xs: 11px;
+$radius-sm: 15px;
+$radius-md: 19px;
+$radius-lg: 22px;
