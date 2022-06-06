@@ -14,10 +14,15 @@ body {
 
 body {
     font: 400 16px/1.7 'Lato', sans-serif;
+    color: getcolor(base, primary);
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    &.index {
+        background-color: getcolor(grays, semilight);
+    }
 }
 
 button {
@@ -30,6 +35,7 @@ button {
 a {
     color: inherit;
     text-decoration: none;
+    transition: color .2s;
 
     &:hover,
     &:focus {
@@ -64,4 +70,12 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     border: 0;
     clip: rect(0 0 0 0);
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
 }
