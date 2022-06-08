@@ -1,6 +1,6 @@
 .header {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 23px;
+    padding-bottom: 23px;
 
     &__row {
         display: flex;
@@ -12,7 +12,7 @@
     }
 
     &__sign-in {
-        margin-left: 35px;
+        margin-left: 36px;
     }
 }
 
@@ -27,7 +27,7 @@
     text-transform: uppercase;
 
     span:nth-child(2) {
-        line-height: .6;
+        line-height: .7;
     }
 }
 
@@ -47,8 +47,8 @@
         text-transform: uppercase;
 
         & + .lang__item {
-            margin-left: 8px;
-            padding-left: 8px;
+            margin-left: 10px;
+            padding-left: 10px;
 
             &::before {
                 position: absolute;

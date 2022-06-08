@@ -1,0 +1,9 @@
+.footer {
+    position: relative;
+
+    &__copy {
+        font-size: 12px;
+        font-weight: 500;
+        color: getcolor(grays, primary);
+    }
+}
