@@ -97,7 +97,10 @@
         <footer class="footer">
             <div class="container">
                 <p class="footer__copy">© 2020 Yuriy Gorlov</p>
-                <img class="footer__main-img" src="./static/img/main-bg.png" alt="Yuriy Gorlov">
+                <picture class="footer__main-img">
+                    <source srcset="./static/img/main-bg-opt.webp 1x, ./static/img/main-bg-opt@2x.webp 2x" type="image/webp">
+                    <img src="./static/img/main-bg-opt.png" srcset="./static/img/main-bg-opt.png 1x, ./static/img/main-bg-opt@2x.png 2x" alt="Yuriy Gorlov">
+                </picture>
             </div>
         </footer>
     </div>
