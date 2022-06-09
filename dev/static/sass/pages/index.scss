@@ -42,6 +42,35 @@
         }
     }
 
+    .social {
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        z-index: 2;
+
+        flex-direction: column;
+
+        transform: translateY(-50%) scale(1);
+
+        &__link {
+            color: getcolor(base, white);
+            background-color: getcolor(base, white);
+
+            &:hover {
+                color: getcolor(purple, primary);
+                background-color: getcolor(purple, primary);
+
+                .social__icon {
+                    fill: getcolor(base, white);
+                }
+            }
+        }
+
+        &__icon {
+            fill: getcolor(purple, primary);
+        }
+    }
+
     .footer {
         margin-top: 40px;
         padding: 35px 0;

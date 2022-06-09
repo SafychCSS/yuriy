@@ -1,3 +1,51 @@
+.social {
+    display: flex;
+    gap: 11px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    &__item {}
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+
+        border-radius: 50%;
+        background-color: getcolor(blue, primary);
+
+        transition: .2s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__icon {
+        fill: #E3F8FF;
+        transition: .2s;
+
+        &.-insta {
+            width: 18px;
+            height: 18px;
+        }
+
+        &.-vk {
+            width: 20px;
+            height: 14px;
+        }
+
+        &.-fb {
+            width: 12px;
+            height: 18px;
+        }
+    }
+}
+
 .footer {
     position: relative;
 
