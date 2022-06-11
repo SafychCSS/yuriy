@@ -1,0 +1,133 @@
+.about {
+    position: relative;
+    overflow: hidden;
+
+    &__info {
+        max-width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: center;
+    }
+
+    &__title {
+        justify-content: center;
+    }
+
+    &__text {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    &__scroll-down {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 68px;
+        height: 68px;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+
+        border: 1px solid getcolor(grays, extralight2);
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        transition: border .2s;
+
+        svg {
+            width: 21px;
+            height: 19px;
+
+            stroke: getcolor(base, primary);
+
+            transition: .2s;
+        }
+
+        &:hover {
+            border-color: getcolor(purple, primary);
+            svg {
+                stroke: getcolor(purple, primary);
+                transform: translateY(3px);
+            }
+        }
+    }
+
+    &__forest {
+        position: relative;
+
+        display: inline-block;
+        width: 240px;
+        height: 245px;
+        margin-top: 70px;
+
+        &::after {
+            position: absolute;
+            top: 40px;
+            right: -91px;
+            content: '';
+
+            width: 56px;
+            height: 56px;
+
+            background-color: getcolor(yellow, primary);
+            border-radius: $radius-sm;
+        }
+    }
+
+    &__man {
+        position: relative;
+
+        display: inline-block;
+        width: 350px;
+        height: 250px;
+        margin-left: 168px;
+
+        &::after {
+            position: absolute;
+            top: -48px;
+            left: -50px;
+            content: '';
+            z-index: -1;
+
+            width: 120px;
+            height: 120px;
+
+            background-color: getcolor(purple, primary);
+            border-radius: $radius-lg;
+        }
+    }
+
+    &__flat {
+        position: absolute;
+        top: 110px;
+        right: 0;
+
+        display: inline-block;
+        width: 320px;
+        height: 500px;
+
+        &::after {
+            position: absolute;
+            bottom: -58px;
+            right: -10px;
+            content: '';
+            z-index: -1;
+
+            width: 375px;
+            height: 293px;
+
+            background-color: getcolor(blue, primary);
+            border-radius: $radius-lg;
+        }
+    }
+
+    &__pic {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        border-radius: $radius-sm;
+    }
+}
