@@ -16,6 +16,7 @@ body {
 body {
     font: 400 16px/1.7 'Lato', sans-serif;
     color: getcolor(base, primary);
+    background-color: getcolor(base, white);
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
@@ -37,6 +38,7 @@ a {
     &:hover,
     &:focus {
         text-decoration: none;
+        color: getcolor(purple, primary);
     }
 }
 

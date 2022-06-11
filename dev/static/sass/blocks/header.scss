@@ -2,6 +2,8 @@
     padding-top: 23px;
     padding-bottom: 23px;
 
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
     &__row {
         display: flex;
         align-items: center;
@@ -11,8 +13,16 @@
         margin-right: auto;
     }
 
+    &__menu {
+        margin-right: 62px;
+    }
+
+    .lang {
+        margin-right: 36px;
+    }
+
     &__sign-in {
-        margin-left: 36px;
+
     }
 }
 
@@ -29,9 +39,50 @@
     span:nth-child(2) {
         line-height: .7;
     }
+}
 
-    &:hover {
-        color: getcolor(purple, primary);
+.menu {
+    ul {
+        display: flex;
+        gap: 58px;
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    li {
+    }
+
+    a {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            content: '';
+
+            width: 6px;
+            height: 6px;
+            opacity: 0;
+
+            background-color: currentColor;
+            border-radius: 50%;
+
+            transform: translate(-50%, 0);
+            transition: .2s;
+        }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+                transform: translate(-50%, 10px);
+            }
+        }
     }
 }
 
@@ -88,19 +139,33 @@
     font-weight: 900;
 
     &:hover {
-        color: getcolor(purple, primary);
+        .sign-in,
+        &.-guest .sign-in {
+            &__icon {
+                background-color: getcolor(purple, primary);
 
-        .sign-in__icon {
-            background-color: getcolor(purple, primary);
+                svg {
+                    stroke: getcolor(base, white);
+                }
+            }
+        }
+    }
 
-            svg {
-                stroke: getcolor(base, white);
+    &.-guest {
+        .sign-in {
+            &__icon {
+                background-color: getcolor(base, white);
+            }
+
+            &__title {
+                display: inline-block;
             }
         }
     }
 
     &__title {
-
+        display: none;
+        margin-right: 20px;
     }
 
     &__icon {
@@ -109,16 +174,11 @@
         justify-content: center;
         width: 40px;
         height: 40px;
-        margin-left: 20px;
 
         background-color: getcolor(yellow, primary);
         border-radius: 50%;
 
         transition: .2s;
-
-        &.-guest {
-            background-color: getcolor(base, white);
-        }
 
         svg {
             width: 15px;
