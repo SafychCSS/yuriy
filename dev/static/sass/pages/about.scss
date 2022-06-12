@@ -82,7 +82,7 @@
         display: inline-block;
         width: 350px;
         height: 250px;
-        margin-left: 168px;
+        margin-left: 210px;
 
         &::after {
             position: absolute;
@@ -122,12 +122,123 @@
             border-radius: $radius-lg;
         }
     }
+}
+
+.recreation {
+    $this: &;
+
+    &__title {
+        margin-bottom: 48px;
+    }
+
+    &__text-heading {
+        p + p {
+            margin-top: 30px;
+        }
+    }
+
+    &__box {
+        margin-top: 70px;
+
+        font-size: 17px;
+        letter-spacing: 0.01em;
+    }
+
+    &__item {
+        display: flex;
+
+        & + #{$this}__item {
+            margin-top: 80px;
+        }
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+
+            #{$this}__info {
+                padding: 70px 10% 70px 70px;
+
+                &::after {
+                    left: 0;
+                    right: -80px;
+                }
+            }
+        }
+    }
+
+    &__img {
+        width: 38%;
+        max-height: 415px;
+        margin-top: 74px;
+    }
+
+    &__info {
+        position: relative;
+
+        width: 62%;
+        padding: 80px 70px 80px 10%;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: -80px;
+            bottom: 0;
+            right: 0;
+            content: '';
+            z-index: -1;
+
+            background-color: getcolor(grays, extralight);
+            border-radius: $radius-lg;
+        }
+    }
+
+    &__title {
+        margin-bottom: 34px;
+    }
+
+    &__text {
+        line-height: 1.8;
+        color: getcolor(base, secondary);
+    }
+
+    &__additional {
+        margin-top: 58px;
+    }
+
+    &__list {
+        margin: 16px 0 0;
+        padding: 0;
+
+        list-style: none;
+
+        li {
+            position: relative;
+            padding-left: 20px;
+
+            &::before {
+                position: absolute;
+                top: 12px;
+                left: 0;
+                content: '';
+
+                width: 7px;
+                height: 7px;
+
+                border-radius: 50%;
+                background-color: getcolor(purple, primary);
+            }
+        }
+
+        li + li {
+            margin-top: 14px;
+        }
+    }
 
     &__pic {
-        width: 100%;
-        height: 100%;
+        margin: 80px auto 0;
+        max-width: 1920px;
 
-        object-fit: cover;
-        border-radius: $radius-sm;
+        img {
+            width: 100%;
+        }
     }
 }

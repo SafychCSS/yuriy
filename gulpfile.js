@@ -79,7 +79,8 @@ const stylesDev = () => {
 
 // js
 const scriptBuild = () => {
-    return src('dev/static/js/*')
+    copyPluginsJS();
+    return src('dev/static/js/*.js')
         .pipe(dest('dist/static/js/')) // сохраняем обычный (рабочий вариант)
         .pipe(babel({
             presets: ['@babel/env']
@@ -90,14 +91,20 @@ const scriptBuild = () => {
 }
 
 const scriptDev = () => {
-    return src('dev/static/js/*')
+    copyPluginsJS();
+    return src('dev/static/js/*.js')
         .pipe(plumber())
-        .pipe(rename({suffix: '.min'})) // переименовываем (просто чтобы в разработке сразу указать минифицированный файл и при билде не менять)
+        .pipe(rename({suffix: '.min'}))
         .pipe(plumber.stop())
         .pipe(dest('dist/static/js/'))
         .pipe(browserSync.reload({
             stream: true
         }))
+}
+
+const copyPluginsJS = () => {
+    return src('dev/static/js/plugins/*')
+        .pipe(dest('dist/static/js/plugins'))
 }
 
 // html
