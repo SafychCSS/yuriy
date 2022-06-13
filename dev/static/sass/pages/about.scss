@@ -19,6 +19,14 @@
         }
     }
 
+    &__text {
+        font-size: 19px;
+
+        & + .about__text {
+            margin-top: 30px;
+        }
+    }
+
     ::selection {
         background-color: getcolor(yellow, primary);
     }
@@ -221,32 +229,7 @@
     }
 
     &__list {
-        margin: 16px 0 0;
-        padding: 0;
-
-        list-style: none;
-
-        li {
-            position: relative;
-            padding-left: 20px;
-
-            &::before {
-                position: absolute;
-                top: 12px;
-                left: 0;
-                content: '';
-
-                width: 7px;
-                height: 7px;
-
-                border-radius: 50%;
-                background-color: getcolor(purple, primary);
-            }
-        }
-
-        li + li {
-            margin-top: 14px;
-        }
+        margin-top: 16px;
     }
 
     &__pic {
@@ -267,12 +250,26 @@
 }
 
 .list-counter {
+    $this: &;
+
     margin: 0;
     padding: 0;
 
     list-style: none;
 
     counter-reset: section;
+
+    &_simple {
+        #{$this}__item {
+            & + #{$this}__item {
+                margin-top: 25px;
+            }
+        }
+
+        #{$this}__title {
+
+        }
+    }
 
     &__item {
         display: flex;
@@ -311,5 +308,88 @@
     &__text {
         margin-top: 13px;
         font-weight: 500;
+    }
+}
+
+.target {
+    &__list {
+        margin-top: 40px;
+    }
+}
+
+.projects {
+    &__tabs {
+        margin-top: 70px;
+        padding-top: 47px;
+        padding-bottom: 140px;
+
+        border: 1px solid getcolor(grays, secondary);
+        border-radius: $radius-lg;
+    }
+}
+
+.tabs {
+    &__list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        gap: 40px;
+
+        list-style: none;
+
+        font-size: 18px;
+    }
+
+    &__item {
+    }
+
+    &__name {
+        display: inline-block;
+        padding: 9px 16px;
+
+        font-weight: 600;
+        color: getcolor(base, primary);
+
+        border-radius: $radius-xs;
+
+        transition: .2s;
+
+        &.active,
+        &:hover {
+            color: getcolor(base, white);
+            background: getcolor(red, primary);
+        }
+    }
+
+    &__content {
+        display: none;
+        gap: 8%;
+        margin-top: 80px;
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    &__info {}
+
+    &__block {
+        margin-top: 40px;
+    }
+
+    &__pic {
+        display: inline-block;
+        width: 416px;
+        height: 416px;
+        flex-shrink: 0;
+        overflow: hidden;
+
+        border-radius: 50%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }

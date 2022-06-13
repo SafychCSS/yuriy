@@ -173,3 +173,32 @@ h1, h2, h3, h4, h5, h6 {
         background: url(../img/link.svg) no-repeat;
     }
 }
+
+.list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    li {
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+            position: absolute;
+            top: 12px;
+            left: 0;
+            content: '';
+
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+            background-color: getcolor(purple, primary);
+        }
+    }
+
+    li + li {
+        margin-top: 14px;
+    }
+}
