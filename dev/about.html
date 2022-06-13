@@ -13,44 +13,44 @@
 <body>
     <div class="wrapper">
         //= blocks/header.html
-        <main class="main">
-            <section class="about">
+        <main class="about">
+            <section class="welcome">
                 <div class="container">
-                    <div class="about__forest">
+                    <div class="welcome__forest">
                         <picture>
                             <source srcset="./static/img/about/forest-opt.webp 1x, ./static/img/about/forest@2x-opt.webp 2x">
                             <img class="image" src="./static/img/about/forest-opt.jpg" srcset="./static/img/about/forest-opt.jpg 1x, ./static/img/about/forest@2x-opt.jpg 2x" alt="Отдых">
                         </picture>
                     </div>
-                    <div class="about__info">
-                        <h1 class="title title_h1 title_icon about__title">
+                    <div class="welcome__info">
+                        <h1 class="title title_h1 title_icon welcome__title">
                             <img src="./static/img/category/life-big.png" width="78" height="78" alt="Моя жизнь">Моя жизнь
                         </h1>
-                        <p class="about__text">Моменты из жизни и отдыха. Все, что не связано с работой</p>
-                        <a class="about__scroll-down" data-scroll href="#rest">
+                        <p class="welcome__text">Моменты из жизни и отдыха. Все, что не связано с работой</p>
+                        <a class="welcome__scroll-down" data-scroll href="#rest">
                             <svg>
                                 <use href="./static/img/sprite.svg#arrow"></use>
                             </svg>
                         </a>
                     </div>
-                    <div class="about__man">
+                    <div class="welcome__man">
                         <picture>
                             <source srcset="./static/img/about/man-opt.webp 1x, ./static/img/about/man@2x-opt.webp 2x">
                             <img class="image" src="./static/img/about/man-opt.jpg" srcset="./static/img/about/man-opt.jpg 1x, ./static/img/about/man@2x-opt.jpg 2x" alt="Юрий Горлов">
                         </picture>
                     </div>
                 </div>
-                <div class="about__flat">
+                <div class="welcome__flat">
                     <picture>
                         <source srcset="./static/img/about/flat-opt.webp 1x, ./static/img/about/flat@2x-opt.webp 2x">
                         <img class="image" src="./static/img/about/flat-opt.jpg" srcset="./static/img/about/flat-opt.jpg 1x, ./static/img/about/flat@2x-opt.jpg 2x" alt="Мой дом">
                     </picture>
                 </div>
             </section>
-            <section class="recreation main__recreation" id="rest">
+            <section class="recreation about__recreation" id="rest">
                 <div class="container container_sm">
-                    <h2 class="title title_h2 rest__title">Как я отдыхаю</h2>
-                    <div class="recreation__text-heading">
+                    <h2 class="title title_h2 about__title">Как я отдыхаю</h2>
+                    <div class="about__text-heading">
                         <p>В промежутках можно ставить блоки текста</p>
                         <p>Алая вспышка осветила силуэт зазубренного крыла. Разнообразный и богатый опыт начало повседневной <strong>работы по формированию</strong>  позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.</p>
                     </div>
@@ -106,6 +106,78 @@
                         <source srcset="./static/img/about/rest-bg-opt.webp 1x, ./static/img/about/rest-bg@2x-opt.webp 2x">
                         <img loading="lazy" src="./static/img/about/rest-bg-opt.jpg" srcset="./static/img/about/rest-bg-opt.jpg 1x, ./static/img/about/rest-bg@2x-opt.jpg 2x" alt="Отдых">
                     </picture>
+                </div>
+            </section>
+            <section class="places about__container">
+                <div class="container container_sm">
+                    <h2 class="title title_h2 about__title">Где хочу побывать</h2>
+                    <div class="about__text-heading">
+                        <p>Кстати можно  выделять блоки текста,  примерно вот так.</p>
+                        <p>Алая вспышка осветила силуэт зазубренного крыла. Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.</p>
+                    </div>
+
+                    <ol class="list-counter places__list">
+                        <li class="list-counter__item">
+                            <div class="list-counter__photo">
+                                <picture>
+                                    <source srcset="./static/img/about/place/baikal-opt.webp 1x, ./static/img/about/place/baikal@2x-opt.webp 2x">
+                                    <img loading="lazy" class="list-counter__img" src="./static/img/about/place/baikal-opt.jpg" srcset="./static/img/about/baikal-opt.jpg 1x, ./static/img/about/baikal@2x-opt.jpg 2x" alt="Байкал">
+                                </picture>
+                            </div>
+                            <div class="list-counter__info">
+                                <p class="list-counter__title title title_h3">Байкал</p>
+                                <p class="list-counter__text">А тут можно постваить описание под этим блоком. Или даже добавить ссылку: <a class="link" href="#">выглядит вот так</a></p>
+                            </div>
+                        </li>
+                        <li class="list-counter__item">
+                            <div class="list-counter__photo">
+                                <picture>
+                                    <source srcset="./static/img/about/place/antarctica-opt.webp 1x, ./static/img/about/place/antarctica@2x-opt.webp 2x">
+                                    <img loading="lazy" class="list-counter__img" src="./static/img/about/place/antarctica-opt.jpg" srcset="./static/img/about/antarctica-opt.jpg 1x, ./static/img/about/antarctica@2x-opt.jpg 2x" alt="Антарктида">
+                                </picture>
+                            </div>
+                            <div class="list-counter__info">
+                                <p class="list-counter__title title title_h3">Антарктида</p>
+                                <p class="list-counter__text">Да, чутка холодно, но почему бы и нет?</p>
+                            </div>
+                        </li>
+                        <li class="list-counter__item">
+                            <div class="list-counter__photo">
+                                <picture>
+                                    <source srcset="./static/img/about/place/dominicana-opt.webp 1x, ./static/img/about/place/dominicana@2x-opt.webp 2x">
+                                    <img loading="lazy" class="list-counter__img" src="./static/img/about/place/dominicana-opt.jpg" srcset="./static/img/about/dominicana-opt.jpg 1x, ./static/img/about/dominicana@2x-opt.jpg 2x" alt="Доминикана">
+                                </picture>
+                            </div>
+                            <div class="list-counter__info">
+                                <p class="list-counter__title title title_h3">Доминикана</p>
+                                <p class="list-counter__text">После холодной Антарктиды - самое то!</p>
+                            </div>
+                        </li>
+                        <li class="list-counter__item">
+                            <div class="list-counter__photo">
+                                <picture>
+                                    <source srcset="./static/img/about/place/dominicana-opt.webp 1x, ./static/img/about/place/dominicana@2x-opt.webp 2x">
+                                    <img loading="lazy" class="list-counter__img" src="./static/img/about/place/dominicana-opt.jpg" srcset="./static/img/about/dominicana-opt.jpg 1x, ./static/img/about/dominicana@2x-opt.jpg 2x" alt="Исландия">
+                                </picture>
+                            </div>
+                            <div class="list-counter__info">
+                                <p class="list-counter__title title title_h3">Исландия</p>
+                                <p class="list-counter__text">Крутые гейзеры, все дела</p>
+                            </div>
+                        </li>
+                        <li class="list-counter__item">
+                            <div class="list-counter__photo">
+                                <picture>
+                                    <source srcset="./static/img/about/place/dominicana-opt.webp 1x, ./static/img/about/place/dominicana@2x-opt.webp 2x">
+                                    <img loading="lazy" class="list-counter__img" src="./static/img/about/place/dominicana-opt.jpg" srcset="./static/img/about/dominicana-opt.jpg 1x, ./static/img/about/dominicana@2x-opt.jpg 2x" alt="Россия">
+                                </picture>
+                            </div>
+                            <div class="list-counter__info">
+                                <p class="list-counter__title title title_h3">Россия</p>
+                                <p class="list-counter__text">Большая территория, всю не объездить</p>
+                            </div>
+                        </li>
+                    </ol>
                 </div>
             </section>
         </main>

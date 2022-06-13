@@ -106,10 +106,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .main {
     flex-grow: 1;
-
-    &__recreation {
-        margin-top: 200px;
-    }
 }
 
 .title {
@@ -150,5 +146,30 @@ h1, h2, h3, h4, h5, h6 {
         img {
             margin-right: 18px;
         }
+    }
+}
+
+.link {
+    position: relative;
+
+    padding-left: 20px;
+
+    font-weight: 700;
+    color: getcolor(purple, primary);
+
+    &:hover {
+        color: darken(getcolor(purple, primary), 10%);
+    }
+
+    &::before {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        content: '';
+
+        width: 15px;
+        height: 14px;
+
+        background: url(../img/link.svg) no-repeat;
     }
 }
