@@ -84,6 +84,23 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: $radius-sm;
 }
 
+.figure {
+    margin: 0;
+
+    &__figcaption {
+        margin-top: 14px;
+
+        font-size: 15px;
+        font-weight: 400;
+        color: getcolor(grays, primary);
+    }
+
+    img {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;

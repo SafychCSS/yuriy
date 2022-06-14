@@ -508,3 +508,51 @@
         }
     }
 }
+
+.about-photo {
+    padding: 75px 0;
+
+    text-align: center;
+    background: getcolor(grays, extralight);
+
+    &__text {
+        max-width: 986px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__list {
+        display: flex;
+        gap: 32px;
+        margin-top: 70px;
+
+        picture {
+            display: block;
+
+            & + picture {
+                margin-top: 32px;
+            }
+        }
+
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 100%;
+            height: auto;
+
+            border-radius: $radius-sm;
+        }
+    }
+
+    &__list-left {
+        width: 38.2%;
+        text-align: right;
+    }
+
+    &__list-right {
+        width: 61.8%;
+        margin-top: 120px;
+
+        text-align: left;
+    }
+}
