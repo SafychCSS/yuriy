@@ -393,3 +393,61 @@
         }
     }
 }
+
+.chronology {
+    &__list {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 51px;
+        padding-bottom: 51px;
+
+        border-bottom: 2px solid getcolor(grays, extralight2);
+    }
+
+    &__year {
+        position: relative;
+
+        margin-right: 59px;
+        padding-right: 59px;
+
+        font-size: 45px;
+        font-weight: 900;
+        line-height: 1.2;
+        color: getcolor(purple, primary);
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            content: '';
+
+            width: 9px;
+            height: 9px;
+
+            border-radius: 50%;
+            background-color: getcolor(grays, secondary);
+
+            transform: translateY(-50%);
+        }
+    }
+
+    &__info {
+        padding-top: 8px;
+    }
+
+    &__title {
+        line-height: 1.2;
+    }
+
+    &__text {
+        margin-top: 25px;
+        font-size: 19px;
+    }
+}
