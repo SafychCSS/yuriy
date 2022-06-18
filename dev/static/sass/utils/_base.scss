@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6 {
 .container {
     position: relative;
 
-    max-width: 1440px;
+    max-width: $screen-lg;
     width: 100%;
     margin: 0 auto;
     padding-left: 40px;
@@ -118,6 +118,12 @@ h1, h2, h3, h4, h5, h6 {
 
     &_sm {
         max-width: 1206px;
+    }
+
+    @media (max-width: $screen-md) {
+        max-width: $container-md;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 

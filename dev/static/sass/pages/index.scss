@@ -95,6 +95,27 @@
             }
         }
     }
+
+    @media (max-width: $screen-md) {
+        &__container {
+            padding-left: 20px;
+        }
+
+        .categories {
+            margin-top: 40px;
+        }
+
+        .footer {
+            &__main-img {
+                width: 760px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
 }
 
 .author {
@@ -119,6 +140,14 @@
 
     &__text {
         font-weight: 500;
+    }
+
+    @media (max-width: $screen-md) {
+        &__name {
+            width: 530px;
+            height: 200px;
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -182,6 +211,17 @@
             stroke: currentColor;
 
             transition: transform .2s;
+        }
+    }
+
+    @media (max-width: $screen-md) {
+        &__link {
+            width: 150px;
+            height: 150px;
+        }
+
+        &__icon {
+            margin-top: 20px;
         }
     }
 }
