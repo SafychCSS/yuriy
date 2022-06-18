@@ -31,4 +31,24 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
+    const btnMenu = document.querySelector('.menu-open');
+    const menu = document.querySelector('.menu');
+    if (btnMenu && menu) {
+        btnMenu.addEventListener('click', () => {
+            btnMenu.classList.toggle('active');
+            menu.classList.toggle('active');
+            document.body.classList.toggle('hidden');
+        });
+    }
+
+    const mainBgPhoto = document.querySelector('.main-bg');
+    const clientWidth = window.screen.width;
+
+    if (mainBgPhoto && clientWidth <= 780) {
+        const clonePhoto = mainBgPhoto.cloneNode(true);
+        const main = document.querySelector('.main');
+        main.append(clonePhoto);
+        mainBgPhoto.remove();
+    }
 });

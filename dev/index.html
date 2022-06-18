@@ -22,7 +22,7 @@
                     </div>
                     <div class="author__info">
                         <p class="author__heading">Привет! Меня зовут Юрий.</p>
-                        <p class="author__text">И это мой личный сайт. А дальше можно<br> написать что-нибудь кратко о себе.</p>
+                        <p class="author__text">И это мой личный сайт. А дальше можно написать что-нибудь кратко о себе.</p>
                     </div>
                 </div>
 
@@ -121,11 +121,12 @@
         </main>
         <footer class="footer">
             <div class="container">
-                <p class="footer__copy">© 2020 Yuriy Gorlov</p>
-                <picture class="footer__main-img">
+                <picture class="main-bg">
+                    <source media="(max-width: 780px)" srcset="./static/img/main-bg-mob-opt.webp 1x, ./static/img/main-bg-mob@2x-opt.webp 2x" type="image/webp">
                     <source srcset="./static/img/main-bg-opt.webp 1x, ./static/img/main-bg-opt@2x.webp 2x" type="image/webp">
                     <img src="./static/img/main-bg-opt.png" srcset="./static/img/main-bg-opt.png 1x, ./static/img/main-bg-opt@2x.png 2x" width="919" height="906" alt="Yuriy Gorlov">
                 </picture>
+                <p class="footer__copy">© 2020 Yuriy Gorlov</p>
             </div>
         </footer>
     </div>

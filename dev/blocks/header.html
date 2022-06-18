@@ -3,20 +3,29 @@
     <div class="container">
         <div class="header__row">
             <a class="logo header__logo" href="#"><span>Yuriy</span><span>Gorlov</span></a>
+            <!-- remove menu-open if guest -->
+            <button class="menu-open" type="button">menu open</button>
+
             <!-- remove menu if guest -->
             <nav class="menu header__menu">
-                <ul>
-                    <li><a class="active" href="#">Жизнь</a></li>
-                    <li><a href="#">Семья</a></li>
-                    <li><a href="#">Моменты</a></li>
-                    <li><a href="#">Журнал</a></li>
-                    <li><a href="#">Связаться</a></li>
+                <ul class="menu__list">
+                    <li><a class="menu__link active" href="#">Жизнь</a></li>
+                    <li><a class="menu__link" href="#">Семья</a></li>
+                    <li><a class="menu__link" href="#">Моменты</a></li>
+                    <li><a class="menu__link" href="#">Журнал</a></li>
+                    <li><a class="menu__link" href="#">Связаться</a></li>
+                </ul>
+                <ul class="lang">
+                    <li class="lang__item"><span class="lang__current">ru</span></li>
+                    <li class="lang__item"><a class="lang__link" href="#">eng</a></li>
                 </ul>
             </nav>
-            <ul class="lang">
+            <!-- add if guest
+            <ul class="lang -guest">
                 <li class="lang__item"><span class="lang__current">ru</span></li>
                 <li class="lang__item"><a class="lang__link" href="#">eng</a></li>
             </ul>
+            -->
             <!-- add class "-guest" if guest -->
             <a class="sign-in header__sign-in" href="#">
                 <span class="sign-in__title">Вход для друзей</span>
