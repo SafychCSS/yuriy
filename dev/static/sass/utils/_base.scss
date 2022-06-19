@@ -83,6 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 .image {
     width: 100%;
     height: auto;
+    max-height: 100%;
 
     object-fit: cover;
     border-radius: $radius-sm;
@@ -189,6 +190,32 @@ h1, h2, h3, h4, h5, h6 {
 
         img {
             margin-right: 18px;
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        &_h1 {
+            font-size: 31px;
+        }
+
+        &_h2 {
+            font-size: 27px;
+        }
+
+        &_h3 {
+            font-size: 19px;
+        }
+
+        &_h4 {
+            font-size: 16px;
+        }
+
+        &_icon {
+            img {
+                width: 50px;
+                height: 50px;
+                margin-right: 9px;
+            }
         }
     }
 }
