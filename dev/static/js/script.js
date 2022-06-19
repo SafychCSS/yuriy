@@ -51,4 +51,19 @@ document.addEventListener('DOMContentLoaded', function () {
         main.append(clonePhoto);
         mainBgPhoto.remove();
     }
+
+    const familySwiper = document.querySelector('.family-swiper');
+    if (familySwiper) {
+        const swiper = new Swiper('.family-swiper', {
+            scrollbar: {
+                el: '.swiper-scrollbar'
+            },
+            navigation: {
+                nextEl: '.family-swiper__btn.-next',
+                prevEl: '.family-swiper__btn.-prev'
+            },
+            slidesPerView: 'auto',
+            spaceBetween: 55
+        });
+    }
 });

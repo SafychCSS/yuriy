@@ -7,373 +7,136 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="./static/css/style.min.css">
     <title>Document</title>
 </head>
 <body>
     <div class="wrapper">
         //= blocks/header.html
-        <main class="about">
-            <section class="welcome">
-                <div class="container welcome__container">
-                    <div class="welcome__forest">
-                        <picture>
-                            <source srcset="./static/img/about/forest-opt.webp 1x, ./static/img/about/forest@2x-opt.webp 2x">
-                            <img class="image" src="./static/img/about/forest-opt.jpg" srcset="./static/img/about/forest-opt.jpg 1x, ./static/img/about/forest@2x-opt.jpg 2x" alt="Отдых">
-                        </picture>
-                    </div>
-                    <div class="welcome__info">
-                        <h1 class="title title_h1 title_icon welcome__title">
-                            <img src="./static/img/category/life-big.png" width="78" height="78" alt="Моя жизнь">Моя жизнь
-                        </h1>
-                        <p class="welcome__text">Моменты из жизни и отдыха. Все, что не связано с работой</p>
-                        <a class="welcome__scroll-down" data-scroll href="#rest">
-                            <svg>
-                                <use href="./static/img/sprite.svg#arrow"></use>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="welcome__man">
-                        <picture>
-                            <source srcset="./static/img/about/man-opt.webp 1x, ./static/img/about/man@2x-opt.webp 2x">
-                            <img class="image" src="./static/img/about/man-opt.jpg" srcset="./static/img/about/man-opt.jpg 1x, ./static/img/about/man@2x-opt.jpg 2x" alt="Юрий Горлов">
-                        </picture>
-                    </div>
-                </div>
-                <div class="welcome__flat">
-                    <picture>
-                        <source srcset="./static/img/about/flat-opt.webp 1x, ./static/img/about/flat@2x-opt.webp 2x">
-                        <img class="image" src="./static/img/about/flat-opt.jpg" srcset="./static/img/about/flat-opt.jpg 1x, ./static/img/about/flat@2x-opt.jpg 2x" alt="Мой дом">
-                    </picture>
-                </div>
-            </section>
-            <section class="recreation about__recreation" id="rest">
-                <div class="container container_sm">
-                    <h2 class="title title_h2 about__title">Как я отдыхаю</h2>
-                    <div class="about__text-heading">
-                        <p class="about__text">В промежутках можно ставить блоки текста</p>
-                        <p class="about__text">Алая вспышка осветила силуэт зазубренного крыла. Разнообразный и богатый опыт начало повседневной <strong>работы по формированию</strong>  позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.</p>
-                    </div>
-
-                    <div class="recreation__box">
-                        <div class="recreation__item">
-                            <div class="recreation__img">
-                                <picture>
-                                    <source srcset="./static/img/about/forest-big-opt.webp 1x, ./static/img/about/forest-big@2x-opt.webp 2x">
-                                    <img width="430" height="417" loading="lazy" class="image" src="./static/img/about/forest-big-opt.jpg" srcset="./static/img/about/forest-big-opt.jpg 1x, ./static/img/about/forest-big@2x-opt.jpg 2x" alt="Пробую различную кухню">
-                                </picture>
-                            </div>
-                            <div class="recreation__info">
-                                <h3 class="title title_h3 recreation__title">Езжу по диким местам</h3>
-                                <p class="recreation__text">С другой стороны сложившаяся структура организации в значительной степени обуславливает создание форм развития. Постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации дальнейших направлений развития.</p>
-
-                                <div class="recreation__additional">
-                                    <h4 class="title title_h4">Пример списка</h4>
-                                    <ul class="list recreation__list">
-                                        <li>Укрепление и развитие структуры</li>
-                                        <li>Дальнейшее развитие различных форм деятельности</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="recreation__item">
-                            <div class="recreation__img">
-                                <picture>
-                                    <source srcset="./static/img/about/food-opt.webp 1x, ./static/img/about/food@2x-opt.webp 2x">
-                                    <img width="430" height="416" loading="lazy" class="image" src="./static/img/about/food-opt.jpg" srcset="./static/img/about/food-opt.jpg 1x, ./static/img/about/food@2x-opt.jpg 2x" alt="Пробую различную кухню">
-                                </picture>
-                            </div>
-                            <div class="recreation__info">
-                                <h3 class="title title_h3 recreation__title">Путешествую</h3>
-                                <p class="recreation__text">С другой стороны <strong>сложившаяся структура организации</strong> в значительной степени обуславливает создание форм развития. Постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации дальнейших направлений развития. </p>
-
-                                <div class="recreation__additional">
-                                    <h4 class="title title_h4">Пример списка</h4>
-                                    <ul class="list recreation__list">
-                                        <li>Укрепление и развитие структуры</li>
-                                        <li>Дальнейшее развитие различных форм деятельности</li>
-                                        <li>Постоянный количественный рост и сфера нашей активности</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="recreation__pic">
-                    <picture>
-                        <source srcset="./static/img/about/rest-bg-opt.webp 1x, ./static/img/about/rest-bg@2x-opt.webp 2x">
-                        <img loading="lazy" src="./static/img/about/rest-bg-opt.jpg" srcset="./static/img/about/rest-bg-opt.jpg 1x, ./static/img/about/rest-bg@2x-opt.jpg 2x" alt="Отдых">
-                    </picture>
-                </div>
-            </section>
-            <section class="places about__container">
-                <div class="container container_sm">
-                    <h2 class="title title_h2 about__title">Где хочу побывать</h2>
-                    <div class="about__text-heading">
-                        <p class="about__text">Кстати можно  выделять блоки текста,  примерно вот так.</p>
-                        <p class="about__text">Алая вспышка осветила силуэт зазубренного крыла. Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.</p>
-                    </div>
-
-                    <ol class="list-counter places__list">
-                        <li class="list-counter__item">
-                            <div class="list-counter__photo">
-                                <picture>
-                                    <source srcset="./static/img/about/place/baikal-opt.webp 1x, ./static/img/about/place/baikal@2x-opt.webp 2x">
-                                    <img loading="lazy" class="list-counter__img" src="./static/img/about/place/baikal-opt.jpg" srcset="./static/img/about/baikal-opt.jpg 1x, ./static/img/about/baikal@2x-opt.jpg 2x" alt="Байкал">
-                                </picture>
-                            </div>
-                            <div class="list-counter__info">
-                                <p class="list-counter__title title title_h3">Байкал</p>
-                                <p class="list-counter__text">А тут можно постваить описание под этим блоком. Или даже добавить ссылку: <a class="link" href="#">выглядит вот так</a></p>
-                            </div>
-                        </li>
-                        <li class="list-counter__item">
-                            <div class="list-counter__photo">
-                                <picture>
-                                    <source srcset="./static/img/about/place/antarctica-opt.webp 1x, ./static/img/about/place/antarctica@2x-opt.webp 2x">
-                                    <img loading="lazy" class="list-counter__img" src="./static/img/about/place/antarctica-opt.jpg" srcset="./static/img/about/antarctica-opt.jpg 1x, ./static/img/about/antarctica@2x-opt.jpg 2x" alt="Антарктида">
-                                </picture>
-                            </div>
-                            <div class="list-counter__info">
-                                <p class="list-counter__title title title_h3">Антарктида</p>
-                                <p class="list-counter__text">Да, чутка холодно, но почему бы и нет?</p>
-                            </div>
-                        </li>
-                        <li class="list-counter__item">
-                            <div class="list-counter__photo">
-                                <picture>
-                                    <source srcset="./static/img/about/place/dominicana-opt.webp 1x, ./static/img/about/place/dominicana@2x-opt.webp 2x">
-                                    <img loading="lazy" class="list-counter__img" src="./static/img/about/place/dominicana-opt.jpg" srcset="./static/img/about/dominicana-opt.jpg 1x, ./static/img/about/dominicana@2x-opt.jpg 2x" alt="Доминикана">
-                                </picture>
-                            </div>
-                            <div class="list-counter__info">
-                                <p class="list-counter__title title title_h3">Доминикана</p>
-                                <p class="list-counter__text">После холодной Антарктиды - самое то!</p>
-                            </div>
-                        </li>
-                        <li class="list-counter__item">
-                            <div class="list-counter__photo">
-                                <picture>
-                                    <source srcset="./static/img/about/place/dominicana-opt.webp 1x, ./static/img/about/place/dominicana@2x-opt.webp 2x">
-                                    <img loading="lazy" class="list-counter__img" src="./static/img/about/place/dominicana-opt.jpg" srcset="./static/img/about/dominicana-opt.jpg 1x, ./static/img/about/dominicana@2x-opt.jpg 2x" alt="Исландия">
-                                </picture>
-                            </div>
-                            <div class="list-counter__info">
-                                <p class="list-counter__title title title_h3">Исландия</p>
-                                <p class="list-counter__text">Крутые гейзеры, все дела</p>
-                            </div>
-                        </li>
-                        <li class="list-counter__item">
-                            <div class="list-counter__photo">
-                                <picture>
-                                    <source srcset="./static/img/about/place/dominicana-opt.webp 1x, ./static/img/about/place/dominicana@2x-opt.webp 2x">
-                                    <img loading="lazy" class="list-counter__img" src="./static/img/about/place/dominicana-opt.jpg" srcset="./static/img/about/dominicana-opt.jpg 1x, ./static/img/about/dominicana@2x-opt.jpg 2x" alt="Россия">
-                                </picture>
-                            </div>
-                            <div class="list-counter__info">
-                                <p class="list-counter__title title title_h3">Россия</p>
-                                <p class="list-counter__text">Большая территория, всю не объездить</p>
-                            </div>
-                        </li>
-                    </ol>
-                </div>
-            </section>
-            <section class="target about__container">
-                <div class="container container_sm">
-                    <h2 class="title title_h2 about__title">Цели на год</h2>
-                    <div class="about__text-heading">
-                        <p class="about__text">Список может быть и без фото и описания, примерно вот такой</p>
-                    </div>
-                    <ul class="list-counter list-counter_simple target__list">
-                        <li class="list-counter__item">
-                            <p class="title title_h4 list-counter__title">Уделять больше времени своим целям</p>
-                        </li>
-                        <li class="list-counter__item">
-                            <p class="title title_h4 list-counter__title">Меньше нервничать из-за работы</p>
-                        </li>
-                        <li class="list-counter__item">
-                            <p class="title title_h4 list-counter__title">Не тратить время на малозначимые вещи</p>
-                        </li>
-                        <li class="list-counter__item">
-                            <p class="title title_h4 list-counter__title">Наслаждаться жизнью</p>
-                        </li>
-                        <li class="list-counter__item">
-                            <p class="title title_h4 list-counter__title">Заботиться о здоровье</p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="projects about__container">
-                <div class="container container_sm">
-                    <h2 class="title title_h2 about__title">Мои проекты</h2>
-                    <div class="about__text-heading">
-                        <p class="about__text">Алая вспышка осветила силуэт зазубренного крыла. Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.</p>
-                    </div>
-                </div>
+        <main class="main">
+            <div class="family-box">
                 <div class="container">
-                    <div class="tabs projects__tabs">
-                        <div class="container container_sm">
-                            <ul class="tabs__list">
-                                <li class="tabs__item">
-                                    <a class="tabs__name" data-tab="1" href="#">Advideo</a>
-                                </li>
-
-                                <li class="tabs__item">
-                                    <a class="tabs__name active" data-tab="2" href="#">Gamezz</a>
-                                </li>
-
-                                <li class="tabs__item">
-                                    <a class="tabs__name" data-tab="3" href="#">Jomp</a>
-                                </li>
-
-                                <li class="tabs__item">
-                                    <a class="tabs__name" data-tab="4" href="#">ADVline</a>
-                                </li>
-
-                                <li class="tabs__item">
-                                    <a class="tabs__name" data-tab="5" href="#">Секретный проект</a>
-                                </li>
-                            </ul>
-                            <div class="tabs__content" data-tab-content="1">
-                                <div class="tabs__info">
-                                    <h3 class="title title_h3 tabs__title">Проект Advideo</h3>
-                                    <div class="tabs__block">
-                                        <p class="about__text">В промежутках можно ставить блоки текста</p>
-                                        <p class="about__text">Алая вспышка осветила силуэт зазубренного крыла. Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tabs__content" data-tab-content="2">
-                                <div class="tabs__info">
-                                    <h3 class="title title_h3 tabs__title">Мой новый проект Gamezz</h3>
-                                    <div class="tabs__block">
-                                        <p class="about__text">В промежутках можно ставить блоки текста</p>
-                                        <p class="about__text">Алая вспышка осветила силуэт зазубренного крыла. Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.</p>
-                                        <p class="about__text">Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции в значительной степени обуславливает создание модели развития.</p>
-                                    </div>
-                                </div>
-                                <div class="tabs__pic">
+                    <p class="family-box__title">Семья</p>
+                    <div class="swiper family-swiper">
+                        <ul class="family-list swiper-wrapper">
+                            <li class="family-list__item swiper-slide">
+                                <a class="family-list__link" href="#">
                                     <picture>
-                                        <source srcset="./static/img/about/forest-big-opt.webp 1x, ./static/img/about/forest-big@2x-opt.webp 2x">
-                                        <img loading="lazy" src="./static/img/about/forest-big-opt.jpg" srcset="./static/img/about/forest-big-opt.jpg 1x, ./static/img/about/forest-big@2x-opt.jpg 2x" alt="Пробую различную кухню">
+                                        <source srcset="./static/img/family/father-opt.webp 1x, ./static/img/family/father@2x-opt.webp 2x">
+                                        <img width="69" height="69" class="family-list__pic" src="./static/img/family/father-opt.png" srcset="./static/img/family/father-opt.png 1x, ./static/img/family/father@2x-opt.png 2x" alt="Отец">
                                     </picture>
-                                </div>
-                            </div>
-                            <div class="tabs__content" data-tab-content="3">
-                                <div class="tabs__info">
-                                    <h3 class="title title_h3 tabs__title">Проект Jomp</h3>
-                                    <div class="tabs__block">
-                                        <p class="about__text">В промежутках можно ставить блоки текста</p>
+                                    <div class="family-list__info">
+                                        <p class="family-list__member">Отец</p>
+                                        <p class="family-list__name">Дмитрий Иванов</p>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="tabs__content" data-tab-content="4">
-                                <div class="tabs__info">
-                                    <h3 class="title title_h3 tabs__title">Проект ADVline</h3>
-                                </div>
-                            </div>
-                            <div class="tabs__content" data-tab-content="5">
-                                <div class="tabs__info">
-                                    <h3 class="title title_h3 tabs__title">Проект Секретный проект</h3>
-                                </div>
-                            </div>
+                                </a>
+                            </li>
+                            <li class="family-list__item swiper-slide">
+                                <a class="family-list__link" href="#">
+                                    <picture>
+                                        <source srcset="./static/img/family/brother-opt.webp 1x, ./static/img/family/brother@2x-opt.webp 2x">
+                                        <img width="69" height="69" class="family-list__pic" src="./static/img/family/brother-opt.png" srcset="./static/img/family/brother-opt.png 1x, ./static/img/family/brother@2x-opt.png 2x" alt="Брат">
+                                    </picture>
+                                    <div class="family-list__info">
+                                        <p class="family-list__member">Брат</p>
+                                        <p class="family-list__name">Алексей Иванов</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="family-list__item swiper-slide">
+                                <a class="family-list__link" href="#">
+                                    <picture>
+                                        <source srcset="./static/img/family/wife-opt.webp 1x, ./static/img/family/wife@2x-opt.webp 2x">
+                                        <img width="69" height="69" class="family-list__pic" src="./static/img/family/wife-opt.png" srcset="./static/img/family/wife-opt.png 1x, ./static/img/family/wife@2x-opt.png 2x" alt="Жена">
+                                    </picture>
+                                    <div class="family-list__info">
+                                        <p class="family-list__member">Жена</p>
+                                        <p class="family-list__name">Ольга Иванова</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="family-list__item swiper-slide">
+                                <a class="family-list__link" href="#">
+                                    <picture>
+                                        <source srcset="./static/img/family/sister-opt.webp 1x, ./static/img/family/sister@2x-opt.webp 2x">
+                                        <img width="69" height="69" class="family-list__pic" src="./static/img/family/sister-opt.png" srcset="./static/img/family/sister-opt.png 1x, ./static/img/family/sister@2x-opt.png 2x" alt="Сестра">
+                                    </picture>
+                                    <div class="family-list__info">
+                                        <p class="family-list__member">Сестра</p>
+                                        <p class="family-list__name">Мария Иванова</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="family-list__item swiper-slide">
+                                <a class="family-list__link" href="#">
+                                    <picture>
+                                        <source srcset="./static/img/family/sister-opt.webp 1x, ./static/img/family/sister@2x-opt.webp 2x">
+                                        <img width="69" height="69" class="family-list__pic" src="./static/img/family/sister-opt.png" srcset="./static/img/family/sister-opt.png 1x, ./static/img/family/sister@2x-opt.png 2x" alt="Сестра">
+                                    </picture>
+                                    <div class="family-list__info">
+                                        <p class="family-list__member">Сестра</p>
+                                        <p class="family-list__name">Мария Иванова</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="swiper-scrollbar"></div>
+                        <div class="family-swiper__btn -next">
+                            <svg>
+                                <use xlink:href="./static/img/sprite.svg#arrow-slider"></use>
+                            </svg>
+                        </div>
+                        <div class="family-swiper__btn -prev">
+                            <svg>
+                                <use xlink:href="./static/img/sprite.svg#arrow-slider"></use>
+                            </svg>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="chronology about__container">
-                <div class="container container_sm">
-                    <h2 class="title title_h2 about__title">Хронология</h2>
-                    <ul class="chronology__list">
-                        <li class="chronology__item">
-                            <span class="chronology__year">2020</span>
-                            <div class="chronology__info">
-                                <p class="chronology__title title title_h3">В этом году было много интересного</p>
-                                <p class="chronology__text">Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции в значительной степени обуславливает создание модели развития.</p>
-                            </div>
-                        </li>
-                        <li class="chronology__item">
-                            <span class="chronology__year">2019</span>
-                            <div class="chronology__info">
-                                <p class="chronology__title title title_h3">Да и в прошлом тоже</p>
-                                <p class="chronology__text">Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции в значительной степени обуславливает создание модели развития.</p>
-                            </div>
-                        </li>
-                        <li class="chronology__item">
-                            <span class="chronology__year">2018</span>
-                            <div class="chronology__info">
-                                <p class="chronology__title title title_h3">И в этом, как круто</p>
-                                <p class="chronology__text">Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции в значительной степени обуславливает создание модели развития.</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <blockquote class="blockquote">
-                        <div class="blockquote__name">А вообще, мне нравится делать что-нибудь новое, о чем можно написать в этом блоке для выделения текста</div>
-                    </blockquote>
-                    <p class="about__text">Алая вспышка осветила силуэт зазубренного крыла. Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.</p>
-                    <p class="about__text">АЗначимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции в значительной степени обуславливает создание модели развития.</p>
-                </div>
-            </section>
-            <section class="about-photo about__container">
-                <div class="container container_sm">
-                    <h2 class="title title_h2 about__title">Фоточки</h2>
-                    <div class="about__text-heading about-photo__text">
-                        <p class="about__text">У блоков можно задать разный фон, как например у этого. По формированию позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. </p>
-                    </div>
-
-                    <div class="about-photo__list">
-                        <div class="about-photo__list-left">
-                            <picture>
-                                <source srcset="./static/img/about/photo/photo-1-opt.webp 1x, ./static/img/about/photo/photo-1@2x-opt.webp 2x">
-                                <img loading="lazy" src="./static/img/about/photo/photo-1-opt.jpg" srcset="./static/img/about/photo/photo-1-opt.jpg 1x, ./static/img/about/photo/photo-1@2x-opt.jpg 2x" alt="photo 1">
-                            </picture>
-                            <picture>
-                                <source srcset="./static/img/about/photo/photo-3-opt.webp 1x, ./static/img/about/photo/photo-3@2x-opt.webp 2x">
-                                <img loading="lazy" src="./static/img/about/photo/photo-3-opt.jpg" srcset="./static/img/about/photo/photo-3-opt.jpg 1x, ./static/img/about/photo/photo-3@2x-opt.jpg 2x" alt="photo 3">
-                            </picture>
-                        </div>
-                        <div class="about-photo__list-right">
-                            <picture>
-                                <source srcset="./static/img/about/photo/photo-2-opt.webp 1x, ./static/img/about/photo/photo-2@2x-opt.webp 2x">
-                                <img loading="lazy" src="./static/img/about/photo/photo-2-opt.jpg" srcset="./static/img/about/photo/photo-2-opt.jpg 1x, ./static/img/about/photo/photo-2@2x-opt.jpg 2x" alt="photo 2">
-                            </picture>
-                            <picture>
-                                <source srcset="./static/img/about/photo/photo-4-opt.webp 1x, ./static/img/about/photo/photo-4@2x-opt.webp 2x">
-                                <img loading="lazy" src="./static/img/about/photo/photo-4-opt.jpg" srcset="./static/img/about/photo/photo-4-opt.jpg 1x, ./static/img/about/photo/photo-4@2x-opt.jpg 2x" alt="photo 4">
-                            </picture>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- просто пример — удалить -->
-            <div class="example" style="padding-top: 100px;">
-                <div class="container container_sm">
-                    <p class="about__text">Алая вспышка осветила силуэт зазубренного крыла. Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.</p>
-                    <figure class="figure" style="margin: 70px 0">
-                        <picture>
-                            <source srcset="./static/img/about/photo/lake-opt.webp 1x, ./static/img/about/photo/lake@2x-opt.webp 2x">
-                            <img loading="lazy" src="./static/img/about/photo/lake-opt.jpg" srcset="./static/img/about/photo/lake-opt.jpg 1x, ./static/img/about/photo/lake@2x-opt.jpg 2x" alt="lake">
-                        </picture>
-                        <figcaption class="figure__figcaption">Между ними можно поставить фото</figcaption>
-                    </figure>
-
-                    <h3 class="title title_h3">Тоже заголовок, но второго (у дизайнера проблемы явно)</h3>
-                    <p class="about__text">Алая вспышка осветила силуэт зазубренного крыла. Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.</p>
-
-                    <h4 class="title title_h4">Если понадобится создать список</h4>
-                    <ul class="list">
-                        <li>Алая вспышка осветила силуэт</li>
-                        <li>Алая вспышка осветила силуэт</li>
-                        <li>Алая вспышка осветила силуэт</li>
-                    </ul>
                 </div>
             </div>
+            <section class="family">
+                <div class="container">
+                    <div class="family__row">
+                        <div class="family__pic">
+                            <div class="family__pic-square"></div>
+                            <picture>
+                                <source srcset="./static/img/family/brother-big-opt.webp 1x, ./static/img/family/brother-big@2x-opt.webp 2x">
+                                <img width="381" height="493" src="./static/img/family/brother-big-opt.jpg" srcset="./static/img/family/brother-big-opt.jpg 1x, ./static/img/family/brother-big@2x-opt.jpg 2x" alt="Брат - Алексей Иванов">
+                            </picture>
+                        </div>
+                        <div class="family__heading">
+                            <p class="family__member">Брат</p>
+                            <h1 class="title title_h1 family__title">Алексей Иванов</h1>
+                        </div>
+                        <div class="family__info">
+                            <p class="family__main-text">Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции в значительной степени обуславливает создание модели развития. Алая вспышка осветила силуэт зазубренного крыла</p>
+                            <h2>Чем занимается</h2>
+                            <p>С другой стороны сложившаяся структура организации в значительной степени обуславливает создание форм развития. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации дальнейших направлений развития.</p>
+                            <h4>Пример списка</h4>
+                            <ul>
+                                <li>Укрепление и развитие структуры</li>
+                                <li>Дальнейшее развитие различных форм деятельности</li>
+                                <li>Постоянный количественный рост и сфера нашей активности</li>
+                            </ul>
+                            <p>Равным образом начало повседневной работы по формированию позиции позволяет оценить значение модели развития.</p>
+                            <h2>Еще информация</h2>
+                            <p>Укрепление и развитие структуры требуют от нас анализа модели развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание модели развития.</p>
+                            <h3>А это заголовок третьего уровня</h3>
+                            <p>Алая вспышка осветила силуэт зазубренного крыла. Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.</p>
+                            <h3>И это тоже</h3>
+                            <p>Алая вспышка осветила силуэт зазубренного крыла. Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         //= blocks/footer.html
     </div>
-    <script src="./static/js/plugins/smoothscroll.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./static/js/script.min.js"></script>
 </body>
 </html>

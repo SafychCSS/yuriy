@@ -60,4 +60,8 @@
     <symbol viewBox="0 0 7 11" fill="none" id="chevron-right" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.9834 3.6152L4.822 6.45381L1.9834 9.29241" stroke-width="2.14239" stroke-linecap="round"/>
     </symbol>
+    <symbol viewBox="0 0 23 21" fill="none" id="arrow-slider" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.9944 2.13646L2.29932 10.8315M2.29932 10.8315L10.9944 19.5266M2.29932 10.8315H21.5143" stroke-width="2.5" stroke-linecap="round"/>
+    </symbol>
 </svg>
+
