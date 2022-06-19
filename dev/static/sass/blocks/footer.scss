@@ -53,6 +53,18 @@
 
     text-align: center;
 
+    &__social-title {
+        margin-bottom: 16px;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__social {
+        justify-content: center;
+        margin-bottom: 35px;
+    }
+
     &__copy {
         font-size: 12px;
         font-weight: 500;
