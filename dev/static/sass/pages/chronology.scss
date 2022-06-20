@@ -169,3 +169,61 @@
         width: 98%;
     }
 }
+
+.moments {
+    margin-top: 70px;
+
+    &__title {
+        margin-bottom: 48px;
+
+        font-size: 34px;
+        font-weight: 900;
+    }
+
+    &__year {
+        font-weight: 400;
+    }
+
+    &__month {}
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        column-count: 4;
+        column-gap: 38px;
+
+        list-style: none;
+    }
+
+    &__item {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+}
+
+.moment {
+    display: flex;
+    flex-direction: column;
+
+    &__pic {
+        display: block;
+        border-radius: $radius-xs;
+    }
+
+    &__meta {}
+
+    &__date {}
+
+    &__location {
+        svg {
+            width: 11px;
+            height: 14px;
+
+            fill: getcolor(grays, primary);
+        }
+    }
+
+    &__link {}
+
+    &__category {}
+}
