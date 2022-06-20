@@ -63,7 +63,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 prevEl: '.family-swiper__btn.-prev'
             },
             slidesPerView: 'auto',
-            spaceBetween: 55
+            spaceBetween: 18,
+            breakpoints: {
+                601: {
+                    spaceBetween: 55,
+                },
+            }
         });
     }
 });

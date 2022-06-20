@@ -272,4 +272,21 @@ h1, h2, h3, h4, h5, h6 {
     li + li {
         margin-top: 14px;
     }
+
+    @media (max-width: $screen-xs) {
+        li {
+            padding-left: 15px;
+
+            &::before {
+                top: 10px;
+
+                width: 5px;
+                height: 5px;
+            }
+        }
+
+        li + li {
+            margin-top: 10px;
+        }
+    }
 }
