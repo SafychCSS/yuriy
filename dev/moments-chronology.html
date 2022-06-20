@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./static/css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        //= blocks/header.html
+        <main class="main">
+            <div class="chronology-box">
+                <div class="container">
+                    <div class="chronology-box__tabs">
+                        <a class="chronology-box__link" href="#">Альбомы</a>
+                        <span class="chronology-box__divider">|</span>
+                        <span class="chronology-box__link active">Хроника</span>
+                    </div>
+
+                    <div class="chronology chronology-box__years">
+                        <div class="chronology__row">
+                            <div class="chronology__box">
+                                <a class="chronology__btn" href="#">
+                                    <svg>
+                                        <use xlink:href="./static/img/sprite.svg#arrow-slider"></use>
+                                    </svg>
+                                </a>
+                                <div class="chronology__year">
+                                    <span>2019</span>
+                                    <ul class="dropdown">
+                                        <li class="dropdown__item">
+                                            <a class="dropdown__item-name" href="#">2020</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <span class="dropdown__item-name -current">
+                                                <svg>
+                                                    <use xlink:href="./static/img/sprite.svg#check"></use>
+                                                </svg>
+                                                2019
+                                            </span>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a class="dropdown__item-name" href="#">2018</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a class="dropdown__item-name" href="#">2017</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a class="dropdown__item-name" href="#">2016</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a class="chronology__btn next" href="#">
+                                    <svg>
+                                        <use xlink:href="./static/img/sprite.svg#arrow-slider"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        //= blocks/footer.html
+    </div>
+    <script src="./static/js/script.min.js"></script>
+</body>
+</html>

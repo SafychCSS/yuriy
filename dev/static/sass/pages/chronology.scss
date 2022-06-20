@@ -1,0 +1,95 @@
+.chronology-box {
+    position: relative;
+    top: -1px;
+
+    padding-top: 47px;
+    padding-bottom: 57px;
+
+    background-color: getcolor(grays, extralight);
+
+    &__tabs {
+        display: flex;
+        align-items: center;
+        gap: 17px;
+
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        position: relative;
+        color: getcolor(grays, primary);
+
+        &.active {
+            color: getcolor(base, primary);
+        }
+    }
+
+    &__divider {
+        color: #CBDAE6;
+    }
+
+    &__years {
+        margin-top: 38px;
+    }
+}
+
+.chronology {
+    &__row {
+        display: flex;
+    }
+
+    &__box {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+    }
+
+    &__btn {
+        width: 23px;
+        height: 21px;
+
+        &.next {
+            transform: rotate(180deg);
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            stroke: getcolor(base, primary);
+            transition: 0.2s;
+        }
+
+        &:hover {
+            svg {
+                stroke: getcolor(purple, primary);
+            }
+        }
+    }
+
+    &__year {
+        position: relative;
+
+        font-size: 55px;
+        font-weight: 800;
+
+        .dropdown {
+            left: 50%;
+            transform: translate(-50%, -40px);
+        }
+
+        &:hover {
+            .dropdown {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(-50%, 0);
+            }
+        }
+    }
+
+    &__month {}
+}
