@@ -173,6 +173,12 @@
 .moments {
     margin-top: 70px;
 
+    &__wrapper {
+        & + .moments__wrapper {
+            margin-top: 85px;
+        }
+    }
+
     &__title {
         margin-bottom: 48px;
 
@@ -196,6 +202,8 @@
     }
 
     &__item {
+        margin-bottom: 35px;
+
         page-break-inside: avoid;
         break-inside: avoid;
     }
@@ -204,26 +212,56 @@
 .moment {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 
     &__pic {
         display: block;
         border-radius: $radius-xs;
     }
 
-    &__meta {}
+    &__meta {
+        margin-top: 7px;
+        margin-bottom: 8px;
 
-    &__date {}
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: getcolor(grays, primary);
+    }
+
+    &__date {
+        margin-right: 18px;
+    }
 
     &__location {
         svg {
             width: 11px;
             height: 14px;
+            margin-right: 3px;
 
             fill: getcolor(grays, primary);
+
+            transform: translateY(2px);
         }
     }
 
-    &__link {}
+    &__link {
+        line-height: 1.5;
+    }
 
-    &__category {}
+    &__category {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 3px;
+
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 1.2;
+
+        img {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
 }
