@@ -49,6 +49,15 @@
         &__tabs {
             justify-content: center;
         }
+
+        &__album.moments-albums {
+            padding-bottom: 15px;
+            overflow-y: auto;
+        }
+
+        &.-albums {
+            padding-bottom: 20px;
+        }
     }
 
     @media (max-width: $screen-xs) {
@@ -268,6 +277,45 @@
 
     &__month {}
 
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 12px;
+        margin-bottom: 50px;
+    }
+
+    &__sort {
+        position: relative;
+
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.4;
+
+        cursor: pointer;
+
+        svg {
+            width: 9px;
+            height: 9px;
+            margin-left: 6px;
+
+            fill: getcolor(base, primary);
+        }
+
+        .dropdown {
+            right: 0;
+            left: auto;
+        }
+
+        &:hover {
+            .dropdown {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+    }
+
     &__list {
         margin: 0;
         padding: 0;
@@ -464,6 +512,12 @@
     &__count {
         margin-left: 8px;
         font-size: 11px;
+    }
+
+    @media (max-width: $screen-sm) {
+        &__item {
+            flex-shrink: 0;
+        }
     }
 }
 

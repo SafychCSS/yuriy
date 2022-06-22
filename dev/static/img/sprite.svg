@@ -66,5 +66,7 @@
     <symbol viewBox="0 0 9 8" fill="none" id="check" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.38135 3.39246L3.58905 5.60013L7.86347 1.32571" stroke-width="2" stroke-linecap="round"/>
     </symbol>
+    <symbol viewBox="0 0 8 7" id="sort" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.97072 6.47838C4.58339 7.13188 3.63756 7.13188 3.25023 6.47838L0.837458 2.40761C0.44236 1.74101 0.922814 0.897733 1.69771 0.897733L6.52324 0.897733C7.29814 0.897733 7.77859 1.74101 7.38349 2.40761L4.97072 6.47838Z"/>
+    </symbol>
 </svg>
-

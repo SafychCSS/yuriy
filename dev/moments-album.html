@@ -84,9 +84,44 @@
             <div class="moments">
                 <div class="container">
                     <div class="moments__wrapper">
-                        <h2 class="moments__title">
-                            <span class="moments__month">Март</span> <span class="moments__year">2019</span>
-                        </h2>
+                        <h1 class="title title_h1 title_icon">
+                            <picture>
+                                <source srcset="./static/img/title-thumbs/tree-opt.webp 1x, ./static/img/title-thumbs/tree@2x-opt.webp 2x">
+                                <img src="./static/img/title-thumbs/tree-opt.png" srcset="./static/img/title-thumbs/tree-opt.png 1x, ./static/img/title-thumbs/tree@2x-opt.png 2x" alt="Моя Жизнь">
+                            </picture>
+                            Моя Жизнь
+                        </h1>
+                        <div class="moments__box">
+                            <p>Моменты из жизни и отдыха. Все, что не связано с работой</p>
+                            <button class="moments__sort">
+                                Сначала новые
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#sort"></use>
+                                </svg>
+                                <ul class="dropdown">
+                                    <li class="dropdown__item">
+                                        <a class="dropdown__item-name" href="#">2020</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                            <span class="dropdown__item-name -current">
+                                                <svg>
+                                                    <use xlink:href="./static/img/sprite.svg#check"></use>
+                                                </svg>
+                                                2019
+                                            </span>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a class="dropdown__item-name" href="#">2018</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a class="dropdown__item-name" href="#">2017</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a class="dropdown__item-name" href="#">2016</a>
+                                    </li>
+                                </ul>
+                            </button>
+                        </div>
                         <ul class="moments__list">
                             <li class="moment moments__item">
                                 <a href="#">
