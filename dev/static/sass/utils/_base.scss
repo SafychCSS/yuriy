@@ -356,3 +356,52 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
+
+.load-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    padding: 18px 10px;
+    width: 100%;
+
+    text-align: center;
+
+    border: 1px solid getcolor(blue, light);
+    border-radius: $radius-xxs;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+    &:active {
+        color: currentColor;
+    }
+
+    &:hover {
+        background-color: getcolor(grays, extralight);
+    }
+
+    &__name,
+    &__count {
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    &__name {
+        font-size: 14px;
+    }
+
+    &__count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 26px;
+        height: 26px;
+
+        font-size: 12px;
+
+        background-color: getcolor(yellow, primary);
+        border-radius: 50%;
+    }
+}
