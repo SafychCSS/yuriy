@@ -225,7 +225,7 @@ const serve = () => {
             baseDir: "./dist",
         },
         online: true,
-        tunnel: true,
+        // tunnel: true,
     })
 }
 

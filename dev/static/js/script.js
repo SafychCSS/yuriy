@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // todo fix event on every tab
     const tabs = document.querySelectorAll('.tabs');
     if (tabs) {
         tabs.forEach(tabsItem => {
@@ -76,10 +77,51 @@ document.addEventListener('DOMContentLoaded', function () {
     if (momentsSwiper) {
         const swiper = new Swiper(momentsSwiper, {
             slidesPerView: 1,
+
+            pagination: {
+                el: '.js-swiper-count',
+                type: 'fraction',
+                renderFraction: function (currentClass, totalClass) {
+                    return 'Фото <span class="' + currentClass + '"></span>' +
+                        ' из ' +
+                        '<span class="' + totalClass + '"></span>';
+                },
+            },
+            navigation: {
+                nextEl: '.moments-slider__btn.-next',
+                prevEl: '.moments-slider__btn.-prev'
+            },
         });
     }
 
-    //
+    // todo fix addEventListener
     const moments = document.querySelector('.moments');
-    if (moments) {}
+    const momentsSlider = document.querySelector('.moments-modal');
+    if (moments) {
+        moments.addEventListener('click', (e) => {
+            e.preventDefault();
+            const el = e.target.closest('[data-moments-slider]');
+            if (!el) {
+                return;
+            }
+            momentsSlider.classList.add('active');
+            const scrollTop = document.documentElement.scrollTop;
+            const siteHeight = document.documentElement.offsetHeight;
+            const modalHeight = momentsSlider.clientHeight;
+            console.log(scrollTop, modalHeight, siteHeight);
+            console.log(scrollTop + modalHeight < siteHeight);
+            if (scrollTop + modalHeight < siteHeight) {
+                momentsSlider.style.top = scrollTop + 'px';
+            } else {
+                momentsSlider.style.top = siteHeight - modalHeight + 'px';
+            }
+        });
+    }
+
+    momentsSlider.addEventListener('click', (e) => {
+        if (e.target.dataset.modalClose !== undefined || e.target.closest('[data-modal-close]')) {
+            momentsSlider.classList.remove('active');
+            momentsSlider.style.top = 0;
+        }
+    });
 });
