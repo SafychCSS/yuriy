@@ -190,6 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 
         img {
             margin-right: 18px;
+            height: auto;
         }
     }
 
@@ -212,8 +213,6 @@ h1, h2, h3, h4, h5, h6 {
 
         &_icon {
             img {
-                width: 50px;
-                height: 50px;
                 margin-right: 9px;
             }
         }

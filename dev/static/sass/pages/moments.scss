@@ -52,7 +52,7 @@
 
         &__album.moments-albums {
             padding-bottom: 15px;
-            overflow-y: auto;
+            overflow-x: auto;
         }
 
         &.-albums {
@@ -271,6 +271,11 @@
         font-weight: 900;
     }
 
+    &__title-icon {
+        max-width: 55px;
+        height: auto;
+    }
+
     &__year {
         font-weight: 400;
     }
@@ -279,18 +284,22 @@
 
     &__box {
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        align-items: flex-start;
+        gap: 14px;
         margin-top: 12px;
         margin-bottom: 50px;
+
+        line-height: 1.4;
     }
+
+    &__about {}
 
     &__sort {
         position: relative;
 
-        font-size: 16px;
         font-weight: 500;
-        line-height: 1.4;
+        white-space: nowrap;
 
         cursor: pointer;
 
@@ -366,6 +375,22 @@
         &__title {
             margin-bottom: 25px;
             font-size: 24px;
+        }
+
+        &__title-icon {
+            max-width: 36px;
+        }
+
+        &__box {
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        &__sort {
+            .dropdown {
+                right: auto;
+                left: 0;
+            }
         }
 
         &__list {
@@ -459,6 +484,7 @@
     padding: 0;
 
     list-style: none;
+    text-align: center;
 
     &__item {
         display: inline-block;
@@ -517,6 +543,27 @@
     @media (max-width: $screen-sm) {
         &__item {
             flex-shrink: 0;
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        gap: 6px;
+
+        &__link {
+            padding: 10px;
+        }
+
+        &__pic {
+            width: 90px;
+            height: 70px;
+        }
+
+        &__name {
+            font-size: 13px;
+        }
+
+        &__count {
+            display: none;
         }
     }
 }

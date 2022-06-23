@@ -241,6 +241,12 @@
     }
 
     @media (max-width: $screen-xs) {
+        &__title {
+            img {
+                max-width: 50px;
+            }
+        }
+
         &__text {
             margin-top: 14px;
             font-size: 14px;
