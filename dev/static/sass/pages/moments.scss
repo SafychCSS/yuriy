@@ -405,6 +405,22 @@
     flex-direction: column;
     gap: 10px;
 
+    &.-slider {
+        .moment__category {
+            font-size: 16px;
+            font-weight: 700;
+
+            img {
+                width: 54px;
+                height: 54px;
+            }
+        }
+
+        .moment__meta {
+            font-size: 16px;
+        }
+    }
+
     &__pic {
         display: block;
         border-radius: $radius-xs;
@@ -453,6 +469,39 @@
         img {
             display: inline-block;
             vertical-align: middle;
+            width: 37px;
+            height: 37px;
+
+            border-radius: 50%;
+        }
+    }
+
+    &__info {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    &__album {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: getcolor(grays, primary);
+    }
+
+    &__category-name {
+        svg {
+            width: 11px;
+            height: 11px;
+
+            stroke: currentColor;
+            transition: .2s;
+        }
+
+        &:hover {
+            svg {
+                transform: translateX(3px);
+            }
         }
     }
 
@@ -564,6 +613,100 @@
 
         &__count {
             display: none;
+        }
+    }
+}
+
+.moments-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 997;
+
+        background-color: rgba(17, 17, 35, .3);
+    }
+
+    &__container {
+        position: relative;
+        z-index: 998;
+
+        max-width: 970px;
+        width: 100%;
+        margin-top: 87px;
+        padding: 52px 114px 67px;
+
+        background-color: getcolor(base, white);
+        border-radius: $radius-md;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__count-pic {
+        margin-bottom: 7px;
+
+        font-size: 14px;
+        line-height: 1.2;
+        color: getcolor(grays, primary);
+    }
+
+    &__info {
+        margin-top: 35px;
+
+        p {
+            margin: 25px 0;
+        }
+    }
+
+    &__link {
+        font-weight: 700;
+        color: getcolor(purple, primary);
+    }
+
+    &__close {
+        position: absolute;
+        top: -87px;
+        right: -200px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+
+        background-color: getcolor(base, white);
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        svg {
+            width: 13px;
+            height: 13px;
+
+            stroke: currentColor;
+            transition: .2s;
+        }
+
+        &:hover {
+            svg {
+                transform: rotate(90deg);
+            }
         }
     }
 }

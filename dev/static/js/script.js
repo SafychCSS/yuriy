@@ -71,4 +71,15 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    const momentsSwiper = document.querySelector('.moments-slider__swiper');
+    if (momentsSwiper) {
+        const swiper = new Swiper(momentsSwiper, {
+            slidesPerView: 1,
+        });
+    }
+
+    //
+    const moments = document.querySelector('.moments');
+    if (moments) {}
 });
