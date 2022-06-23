@@ -525,6 +525,16 @@
         &__category {
             display: none;
         }
+
+        &.-slider {
+            .moment__category {
+                display: flex;
+            }
+
+            .moment__meta {
+                flex-direction: row;
+            }
+        }
     }
 
 }
@@ -721,6 +731,37 @@
             }
         }
     }
+
+    @media (max-width: $screen-md) {
+        &__container {
+            margin-top: 0;
+        }
+
+        &__close {
+            top: 10px;
+            right: 10px;
+        }
+    }
+
+    @media (max-width: $screen-sm) {
+        &__container {
+            max-width: 90%;
+            padding: 40px 60px;
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        &__container {
+            max-width: 100%;
+            padding: 40px 16px;
+
+            border-radius: 0;
+        }
+
+        &__info {
+            margin-top: 20px;
+        }
+    }
 }
 
 .moments-slider {
@@ -728,12 +769,17 @@
     margin: 28px 0 23px;
 
     &__item {
-        overflow: hidden;
-        border-radius: $radius-md;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
 
         img {
             display: inline-block;
             vertical-align: middle;
+            height: auto;
+
+            border-radius: $radius-md;
         }
     }
 
@@ -741,6 +787,7 @@
         position: absolute;
         top: 50%;
         left: -70px;
+        z-index: 10;
 
         width: 29px;
         height: 26px;
@@ -759,12 +806,48 @@
             right: -70px;
             left: auto;
 
+            margin-top: -12px;
+
             transform: rotate(180deg);
         }
 
         &.swiper-button-disabled {
             cursor: default;
             opacity: .7;
+        }
+    }
+
+    @media (max-width: $screen-sm) {
+        &__btn {
+            left: -50px;
+
+            &.-next {
+                right: -50px;
+            }
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        &__btn {
+            left: -16px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+
+            border-radius: 50%;
+            background-color: getcolor(base, white);
+
+            &.-next {
+                right: -16px;
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
         }
     }
 }
