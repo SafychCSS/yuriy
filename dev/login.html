@@ -13,9 +13,68 @@
 <body>
 <div class="wrapper">
     //= blocks/header.html
-    <main class="main">
+    <main class="main login">
+        <div class="login__bg">
+            <picture>
+                <source srcset="./static/img/login-bg-opt.webp 1x, ./static/img/login-bg@2x-opt.webp 2x">
+                <img width="721" height="882" src="./static/img/login-bg-opt.jpg" srcset="./static/img/login-bg-opt.jpg 1x, ./static/img/login-bg@2x-opt.jpg 2x" alt="Вход">
+            </picture>
+        </div>
+        <div class="login__container">
+            <div class="login__wrapper">
+                <h1 class="login__title">Вход для друзей</h1>
+                <p class="login__description">Войти в раздел с личными записями и фотографиями для моих друзей</p>
+
+                <div class="login-form login__form">
+                    <form name="login" method="post" action="/">
+                        <div class="login-form__field">
+                            <label class="login-form__label" for="pwd">Введите пароль:</label>
+                            <div class="login-form__password">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#lock"></use>
+                                </svg>
+                                <input class="input" id="pwd" type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;">
+                            </div>
+                        </div>
+                        <div class="login-form__btn">
+                            <button class="btn">Войти</button>
+                        </div>
+                        <div class="login-form__remember">
+                            <div class="checkbox">
+                                <input class="visibility-hidden" id="remember" type="checkbox">
+                                <label class="checkbox__label" for="remember">Запомнить</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="login__access login-access">
+                    <div class="login-access__icon">
+                        <svg>
+                            <use xlink:href="./static/img/sprite.svg#key"></use>
+                        </svg>
+                    </div>
+                    <p class="login-access__text">Чтобы получить доступ, просто напшитие мне и попросите пароль:</p>
+                    <ul class="login-access__social">
+                        <li>
+                            <a href="https://t.me/name_channel/">в Телеграм</a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/name_channel/">в Instagram</a>
+                        </li>
+                        <li>
+                            <a href="mailto:example@example.ru">на почту</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button class="login__close" type="button">
+            <svg>
+                <use xlink:href="./static/img/sprite.svg#close"></use>
+            </svg>
+        </button>
     </main>
-    //= blocks/footer.html
 </div>
 <script src="./static/js/script.min.js"></script>
 </body>
