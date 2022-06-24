@@ -214,26 +214,13 @@
     font-weight: 900;
 
     &:hover {
-        .sign-in,
-        &.-guest .sign-in {
-            &__icon {
-                background-color: getcolor(purple, primary);
-
-                svg {
-                    stroke: getcolor(base, white);
-                }
-            }
-        }
-    }
-
-    &.-guest {
         .sign-in {
             &__icon {
-                background-color: getcolor(base, white);
-            }
+                background-color: getcolor(base, primary);
 
-            &__title {
-                display: inline-block;
+                svg {
+                    stroke: getcolor(yellow, primary);
+                }
             }
         }
     }
@@ -241,6 +228,10 @@
     &__title {
         display: none;
         margin-right: 20px;
+
+        &.-guest {
+            display: inline-block;
+        }
     }
 
     &__icon {
@@ -266,11 +257,9 @@
     }
 
     @media (max-width: $screen-xs) {
-        &.-guest {
-            .sign-in {
-                &__title {
-                    display: none;
-                }
+        &__title {
+            &.-guest {
+                display: none;
             }
         }
     }

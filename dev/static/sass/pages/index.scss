@@ -11,6 +11,12 @@
         border: none;
     }
 
+    .sign-in {
+        &__icon {
+            background-color: getcolor(base, white);
+        }
+    }
+
     .main {
         display: flex;
         margin-top: 85px;

@@ -116,12 +116,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 momentsSlider.style.top = siteHeight - modalHeight + 'px';
             }
         });
-    }
 
-    momentsSlider.addEventListener('click', (e) => {
-        if (e.target.dataset.modalClose !== undefined || e.target.closest('[data-modal-close]')) {
-            momentsSlider.classList.remove('active');
-            momentsSlider.style.top = 0;
-        }
-    });
+        momentsSlider.addEventListener('click', (e) => {
+            if (e.target.dataset.modalClose !== undefined || e.target.closest('[data-modal-close]')) {
+                momentsSlider.classList.remove('active');
+                momentsSlider.style.top = 0;
+            }
+        });
+    }
 });
