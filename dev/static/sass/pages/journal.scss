@@ -62,6 +62,10 @@
         }
     }
 
+    &__hash {
+        text-align: center;
+    }
+
     &__item {
         & + .journal-list__item {
             margin-top: 150px;
