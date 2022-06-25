@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./static/css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        //= blocks/header.html
+        <main class="main journal-list">
+            <div class="form-search">
+                <div class="form-search__container">
+                    <form name="search-form" action="/" method="post">
+                        <div class="form-search__box">
+                            <label class="form-search__label" for="search">Искать посты со словами:</label>
+                            <input class="form-search__input" type="text" id="search" name="search" placeholder="Поездка на авто">
+                            <button class="form-search__btn btn">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#search"></use>
+                                </svg>
+                                Найти
+                            </button>
+                        </div>
+                    </form>
+                    <button class="form-search__close btn-close" type="button">
+                        <svg>
+                            <use xlink:href="./static/img/sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="journal-list__box">
+                    <div class="journal-list__tags">
+                        <div class="hash-tag">
+                            <a class="hash-tag__link" href="#">#Про жизнь</a>
+                        </div>
+                        <div class="hash-tag">
+                            <a class="hash-tag__link" href="#">#Отдыхаю</a>
+                        </div>
+                        <div class="hash-tag">
+                            <a class="hash-tag__link" href="#">#Путешествия</a>
+                        </div>
+                        <div class="hash-tag">
+                            <a class="hash-tag__link" href="#">#Семья</a>
+                        </div>
+                        <div class="hash-tag">
+                            <a class="hash-tag__link" href="#">#Всякие мысли</a>
+                        </div>
+                    </div>
+                    <div class="journal-list__btn-search">
+                        <button type="button" class="btn-search js-open-search">
+                            <svg>
+                                <use xlink:href="./static/img/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="journal-list__heading">
+                    <h1 class="title title_h1 title_icon">
+                        <picture>
+                            <source srcset="./static/img/title-thumbs/rest-opt.webp 1x, ./static/img/title-thumbs/rest@2x-opt.webp 2x">
+                            <img src="./static/img/title-thumbs/rest-opt.png" srcset="./static/img/title-thumbs/rest-opt.png 1x, ./static/img/title-thumbs/rest@2x-opt.png 2x" alt="Отдыхаю">
+                        </picture>
+                        Отдыхаю
+                        <span class="title__posts">15</span>
+                    </h1>
+                    <p class="journal-list__description">Моменты из жизни и отдыха. Рассказываю про все, что не связано с работой</p>
+                </div>
+
+                <div class="journal-list__wrapper -page">
+                    <div class="journal-list__sort">
+                        <button class="sort">
+                            Сначала новые
+                            <svg>
+                                <use xlink:href="./static/img/sprite.svg#sort"></use>
+                            </svg>
+                            <ul class="dropdown">
+                                <li class="dropdown__item">
+                                    <a class="dropdown__item-name" href="#">2020</a>
+                                </li>
+                                <li class="dropdown__item">
+                                            <span class="dropdown__item-name -current">
+                                                <svg>
+                                                    <use xlink:href="./static/img/sprite.svg#check"></use>
+                                                </svg>
+                                                2019
+                                            </span>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a class="dropdown__item-name" href="#">2018</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a class="dropdown__item-name" href="#">2017</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a class="dropdown__item-name" href="#">2016</a>
+                                </li>
+                            </ul>
+                        </button>
+                    </div>
+                    <div class="journal-card">
+                        <a href="#" class="journal-card__img">
+                            <picture>
+                                <source srcset="./static/img/journal/1-opt.webp 1x, ./static/img/journal/1@2x-opt.webp 2x">
+                                <img class="journal-card__img" src="./static/img/journal/1-opt.jpg" srcset="./static/img/journal/1-opt.jpg 1x, ./static/img/journal/1@2x-opt.jpg 2x" alt="1">
+                            </picture>
+                        </a>
+                        <div class="journal-card__info">
+                            <p class="journal-card__name">Алая вспышка осветила силуэт зазубренного крыла</p>
+                            <p class="journal-card__text">Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции в значительной степени обуславливает создание модели развития.</p>
+                            <div class="journal-card__meta">
+                                <button class="likes">
+                                    <span class="likes__count">58</span>
+                                </button>
+                                <span class="journal-card__delimiter">|</span>
+                                <span class="journal-card__date">15 апреля 2019</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journal-card">
+                        <a href="#" class="journal-card__img">
+                            <picture>
+                                <source srcset="./static/img/journal/2-opt.webp 1x, ./static/img/journal/2@2x-opt.webp 2x">
+                                <img class="journal-card__img" src="./static/img/journal/2-opt.jpg" srcset="./static/img/journal/2-opt.jpg 1x, ./static/img/journal/2@2x-opt.jpg 2x" alt="2">
+                            </picture>
+                        </a>
+                        <div class="journal-card__info">
+                            <p class="journal-card__name">Алая вспышка осветила силуэт зазубренного крыла</p>
+                            <p class="journal-card__text">Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции в значительной степени обуславливает создание модели развития.</p>
+                            <div class="journal-card__meta">
+                                <button class="likes">
+                                    <span class="likes__count">58</span>
+                                </button>
+                                <span class="journal-card__delimiter">|</span>
+                                <span class="journal-card__date">15 апреля 2019</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journal-card">
+                        <div class="journal-card__info -no-pic">
+                            <p class="journal-card__name">Алая вспышка осветила силуэт зазубренного крыла</p>
+                            <p class="journal-card__text">Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции в значительной степени обуславливает создание модели развития.</p>
+                            <div class="journal-card__meta">
+                                <button class="likes">
+                                    <span class="likes__count">58</span>
+                                </button>
+                                <span class="journal-card__delimiter">|</span>
+                                <span class="journal-card__date">15 апреля 2019</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journal-card">
+                        <a href="#" class="journal-card__img">
+                            <picture>
+                                <source srcset="./static/img/journal/3-opt.webp 1x, ./static/img/journal/3@2x-opt.webp 2x">
+                                <img class="journal-card__img" src="./static/img/journal/3-opt.jpg" srcset="./static/img/journal/3-opt.jpg 1x, ./static/img/journal/3@2x-opt.jpg 2x" alt="1">
+                            </picture>
+                        </a>
+                        <div class="journal-card__info">
+                            <p class="journal-card__name">Алая вспышка осветила силуэт зазубренного крыла</p>
+                            <p class="journal-card__text">Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции в значительной степени обуславливает создание модели развития.</p>
+                            <div class="journal-card__meta">
+                                <button class="likes">
+                                    <span class="likes__count">58</span>
+                                </button>
+                                <span class="journal-card__delimiter">|</span>
+                                <span class="journal-card__date">15 апреля 2019</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="load-more moments__load-more" type="button">
+                        <span class="load-more__name">Еще записи</span>
+                        <span class="load-more__count">12</span>
+                    </button>
+                </div>
+
+            </div>
+        </main>
+        //= blocks/footer.html
+    </div>
+    <script src="./static/js/script.min.js"></script>
+</body>
+</html>

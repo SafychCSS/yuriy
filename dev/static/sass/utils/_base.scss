@@ -191,12 +191,18 @@ h1, h2, h3, h4, h5, h6 {
 
     &_icon {
         display: flex;
-        align-items: center;
 
         img {
             margin-right: 18px;
             height: auto;
         }
+    }
+
+    &__posts {
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: getcolor(grays, primary);
     }
 
     @media (max-width: $screen-xs) {
@@ -219,8 +225,26 @@ h1, h2, h3, h4, h5, h6 {
         &_icon {
             img {
                 margin-right: 9px;
+                max-width: 40px;
             }
         }
+    }
+}
+
+.sort {
+    position: relative;
+
+    font-weight: 500;
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    svg {
+        width: 9px;
+        height: 9px;
+        margin-left: 6px;
+
+        fill: getcolor(base, primary);
     }
 }
 
@@ -664,5 +688,10 @@ h1, h2, h3, h4, h5, h6 {
 
         background-color: getcolor(yellow, primary);
         border-radius: 50%;
+    }
+
+    @media (max-width: $screen-xs) {
+        padding-top: 12px;
+        padding-bottom: 12px;
     }
 }

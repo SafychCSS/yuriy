@@ -296,21 +296,6 @@
     &__about {}
 
     &__sort {
-        position: relative;
-
-        font-weight: 500;
-        white-space: nowrap;
-
-        cursor: pointer;
-
-        svg {
-            width: 9px;
-            height: 9px;
-            margin-left: 6px;
-
-            fill: getcolor(base, primary);
-        }
-
         .dropdown {
             right: 0;
             left: auto;
