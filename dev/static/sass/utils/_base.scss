@@ -270,6 +270,8 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     width: 100%;
     min-height: 61px;
+    padding-left: 24px;
+    padding-right: 24px;
 
     font-size: 16px;
     font-weight: 900;
@@ -287,6 +289,170 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.hash-tag {
+    display: flex;
+    flex-direction: column;
+
+    &__link {
+        display: inline-block;
+        padding: 11px 15px;
+
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.4;
+        white-space: nowrap;
+
+        border-radius: $radius-xs;
+
+        &:hover,
+        &.active {
+            color: getcolor(purple, primary);
+            background-color: getcolor(grays, semilight2);
+        }
+    }
+
+    &__posts {
+        margin-top: 11px;
+
+        font-size: 18px;
+        font-weight: 700;
+        color: getcolor(purple, primary);
+
+        svg {
+            width: 17px;
+            height: 15px;
+            margin-left: 10px;
+
+            stroke: currentColor;
+
+            transform: rotate(180deg) translateY(-2px);
+        }
+    }
+
+    &.-title {
+        align-items: center;
+        .hash-tag__link {
+            padding: 0;
+
+            font-size: 31px;
+            font-weight: 900;
+            line-height: 1.2;
+
+            &:hover {
+                background-color: unset;
+            }
+        }
+    }
+
+    &.-gray {
+        .hash-tag__posts {
+            color: getcolor(grays, primary);
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        &__link {
+            padding: 10px 12px;
+            font-size: 15px;
+        }
+
+        &.-title {
+            .hash-tag__link {
+                font-size: 19px;
+            }
+        }
+
+        &__posts {
+            margin-top: 5px;
+            font-size: 14px;
+
+            svg {
+                width: 14px;
+                height: 12px;
+            }
+        }
+    }
+}
+
+.likes {
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    color: getcolor(base, secondary);
+
+    cursor: pointer;
+    
+    &.active {
+        .likes__count {
+            &::before {
+                background-image: url(../img/svg/heart-fill.svg);
+            }
+        }
+    }
+
+    &__count {
+        position: relative;
+        padding-left: 28px;
+
+        &::before {
+            position: absolute;
+            top: 3px;
+            left: 0;
+            content: '';
+
+            width: 20px;
+            height: 18px;
+
+            background-image: url(../img/svg/heart.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.btn-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: getcolor(base, white);
+    border-radius: 50%;
+    border: 1px solid getcolor(grays, secondary);
+
+    cursor: pointer;
+
+    svg {
+        width: 13px;
+        height: 13px;
+
+        stroke: currentColor;
+        transition: .2s;
+    }
+
+    &:hover {
+        svg {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.btn-search {
+    width: 27px;
+    height: 27px;
+
+    cursor: pointer;
+
+    svg {
+        width: 100%;
+        height: 100%;
+
+        fill: getcolor(base, primary);
+    }
+}
 
 .checkbox {
     &__label {

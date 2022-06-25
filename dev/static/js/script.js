@@ -124,4 +124,24 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    const formSearch = document.querySelector('.form-search');
+
+    if (formSearch) {
+        document.addEventListener('click', (e) => {
+            const btnOpenForm = e.target.closest('.js-open-search');
+            const btnCloseForm = e.target.closest('.form-search__close');
+            const isFormSearchClick = e.target.closest('.form-search');
+            const hasFormSearchClass = formSearch.classList.contains('active');
+
+            if (btnOpenForm) {
+                formSearch.classList.add('active');
+            }
+            if (hasFormSearchClass && !btnOpenForm && !isFormSearchClick || btnCloseForm) {
+                formSearch.classList.remove('active');
+            }
+        });
+    }
+
+
 });

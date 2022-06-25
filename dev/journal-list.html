@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./static/css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        //= blocks/header.html
+        <main class="main journal-list">
+            <div class="form-search">
+                <div class="form-search__container">
+                    <form name="search-form" action="/" method="post">
+                        <div class="form-search__box">
+                            <label class="form-search__label" for="search">Искать посты со словами:</label>
+                            <input class="form-search__input" type="text" id="search" name="search" placeholder="Поездка на авто">
+                            <button class="form-search__btn btn">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#search"></use>
+                                </svg>
+                                Найти
+                            </button>
+                        </div>
+                    </form>
+                    <button class="form-search__close btn-close" type="button">
+                        <svg>
+                            <use xlink:href="./static/img/sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="journal-list__heading">
+                    <h1 class="title title_h1">Журнал</h1>
+                    <p class="journal-list__description">Моменты из жизни и отдыха. Рассказываю про все, что<br> не связано с работой</p>
+                </div>
+
+                <div class="journal-list__box">
+                    <div class="journal-list__tags">
+                        <div class="hash-tag">
+                            <a class="hash-tag__link" href="#">#Про жизнь</a>
+                        </div>
+                        <div class="hash-tag">
+                            <a class="hash-tag__link" href="#">#Отдыхаю</a>
+                        </div>
+                        <div class="hash-tag">
+                            <a class="hash-tag__link" href="#">#Путешествия</a>
+                        </div>
+                        <div class="hash-tag">
+                            <a class="hash-tag__link" href="#">#Семья</a>
+                        </div>
+                        <div class="hash-tag">
+                            <a class="hash-tag__link" href="#">#Всякие мысли</a>
+                        </div>
+                    </div>
+                    <div class="journal-list__btn-search">
+                        <button type="button" class="btn-search js-open-search">
+                            <svg>
+                                <use xlink:href="./static/img/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="journal-list__wrapper">
+                    <div class="journal-list__item">
+                        <div class="hash-tag -title">
+                            <a class="hash-tag__link" href="#">#Отдыхаю</a>
+                            <span class="hash-tag__posts">
+                                15 постов
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#arrow-slider"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="journal-list__row">
+                            <div class="journal-card">
+                                <a href="#" class="journal-card__img">
+                                    <picture>
+                                        <source srcset="./static/img/journal/list/1-opt.webp 1x, ./static/img/journal/list/1@2x-opt.webp 2x">
+                                        <img class="journal-card__img" src="./static/img/journal/list/1-opt.jpg" srcset="./static/img/journal/list/1-opt.jpg 1x, ./static/img/journal/list/1@2x-opt.jpg 2x" alt="1">
+                                    </picture>
+                                </a>
+                                <a class="journal-card__link" href="#">Алая вспышка осветила силуэт зазубренного крыла</a>
+                                <div class="journal-card__meta">
+                                    <button class="likes">
+                                        <span class="likes__count">58</span>
+                                    </button>
+                                    <span class="journal-card__delimiter">|</span>
+                                    <span class="journal-card__date">15 апреля 2019</span>
+                                </div>
+                            </div>
+                            <div class="journal-card">
+                                <a href="#" class="journal-card__img">
+                                    <picture>
+                                        <source srcset="./static/img/journal/list/2-opt.webp 1x, ./static/img/journal/list/2@2x-opt.webp 2x">
+                                        <img class="journal-card__img" src="./static/img/journal/list/2-opt.jpg" srcset="./static/img/journal/list/2-opt.jpg 1x, ./static/img/journal/list/2@2x-opt.jpg 2x" alt="2">
+                                    </picture>
+                                </a>
+                                <a class="journal-card__link" href="#">Алая вспышка осветила силуэт зазубренного крыла</a>
+                                <div class="journal-card__meta">
+                                    <button class="likes">
+                                        <span class="likes__count">58</span>
+                                    </button>
+                                    <span class="journal-card__delimiter">|</span>
+                                    <span class="journal-card__date">15 апреля 2019</span>
+                                </div>
+                            </div>
+                            <div class="journal-card">
+                                <a href="#" class="journal-card__img">
+                                    <picture>
+                                        <source srcset="./static/img/journal/list/3-opt.webp 1x, ./static/img/journal/list/3@2x-opt.webp 2x">
+                                        <img class="journal-card__img" src="./static/img/journal/list/3-opt.jpg" srcset="./static/img/journal/list/3-opt.jpg 1x, ./static/img/journal/list/3@2x-opt.jpg 2x" alt="3">
+                                    </picture>
+                                </a>
+                                <a class="journal-card__link" href="#">Алая вспышка осветила силуэт зазубренного крыла</a>
+                                <div class="journal-card__meta">
+                                    <button class="likes active">
+                                        <span class="likes__count">58</span>
+                                    </button>
+                                    <span class="journal-card__delimiter">|</span>
+                                    <span class="journal-card__date">15 апреля 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="journal-list__item">
+                        <div class="hash-tag -title">
+                            <a class="hash-tag__link" href="#">#Путешествия</a>
+                            <span class="hash-tag__posts">
+                                8 постов
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#arrow-slider"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="journal-list__row">
+                            <div class="journal-card">
+                                <a href="#" class="journal-card__img">
+                                    <picture>
+                                        <source srcset="./static/img/journal/list/4-opt.webp 1x, ./static/img/journal/list/4@2x-opt.webp 2x">
+                                        <img class="journal-card__img" src="./static/img/journal/list/4-opt.jpg" srcset="./static/img/journal/list/4-opt.jpg 1x, ./static/img/journal/list/4@2x-opt.jpg 2x" alt="5">
+                                    </picture>
+                                </a>
+                                <a class="journal-card__link" href="#">Алая вспышка осветила силуэт зазубренного крыла</a>
+                                <div class="journal-card__meta">
+                                    <button class="likes">
+                                        <span class="likes__count">58</span>
+                                    </button>
+                                    <span class="journal-card__delimiter">|</span>
+                                    <span class="journal-card__date">15 апреля 2019</span>
+                                </div>
+                            </div>
+                            <div class="journal-card">
+                                <a href="#" class="journal-card__img">
+                                    <picture>
+                                        <source srcset="./static/img/journal/list/5-opt.webp 1x, ./static/img/journal/list/5@2x-opt.webp 2x">
+                                        <img class="journal-card__img" src="./static/img/journal/list/5-opt.jpg" srcset="./static/img/journal/list/5-opt.jpg 1x, ./static/img/journal/list/5@2x-opt.jpg 2x" alt="5">
+                                    </picture>
+                                </a>
+                                <a class="journal-card__link" href="#">Алая вспышка осветила силуэт зазубренного крыла</a>
+                                <div class="journal-card__meta">
+                                    <button class="likes">
+                                        <span class="likes__count">58</span>
+                                    </button>
+                                    <span class="journal-card__delimiter">|</span>
+                                    <span class="journal-card__date">15 апреля 2019</span>
+                                </div>
+                            </div>
+                            <div class="journal-card">
+                                <a href="#" class="journal-card__img">
+                                    <picture>
+                                        <source srcset="./static/img/journal/list/6-opt.webp 1x, ./static/img/journal/list/6@2x-opt.webp 2x">
+                                        <img class="journal-card__img" src="./static/img/journal/list/6-opt.jpg" srcset="./static/img/journal/list/6-opt.jpg 1x, ./static/img/journal/list/6@2x-opt.jpg 2x" alt="6">
+                                    </picture>
+                                </a>
+                                <a class="journal-card__link" href="#">Алая вспышка осветила силуэт зазубренного крыла</a>
+                                <div class="journal-card__meta">
+                                    <button class="likes active">
+                                        <span class="likes__count">58</span>
+                                    </button>
+                                    <span class="journal-card__delimiter">|</span>
+                                    <span class="journal-card__date">15 апреля 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="journal-list__item">
+                        <div class="hash-tag -title">
+                            <a class="hash-tag__link" href="#">#Про жизнь</a>
+                            <span class="hash-tag__posts">
+                                7 постов
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#arrow-slider"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="journal-list__row">
+                            <div class="journal-card">
+                                <a href="#" class="journal-card__img">
+                                    <picture>
+                                        <source srcset="./static/img/journal/list/7-opt.webp 1x, ./static/img/journal/list/7@2x-opt.webp 2x">
+                                        <img class="journal-card__img" src="./static/img/journal/list/7-opt.jpg" srcset="./static/img/journal/list/7-opt.jpg 1x, ./static/img/journal/list/7@2x-opt.jpg 2x" alt="7">
+                                    </picture>
+                                </a>
+                                <a class="journal-card__link" href="#">Алая вспышка осветила силуэт зазубренного крыла</a>
+                                <div class="journal-card__meta">
+                                    <button class="likes">
+                                        <span class="likes__count">58</span>
+                                    </button>
+                                    <span class="journal-card__delimiter">|</span>
+                                    <span class="journal-card__date">15 апреля 2019</span>
+                                </div>
+                            </div>
+                            <div class="journal-card">
+                                <a href="#" class="journal-card__img">
+                                    <picture>
+                                        <source srcset="./static/img/journal/list/8-opt.webp 1x, ./static/img/journal/list/8@2x-opt.webp 2x">
+                                        <img class="journal-card__img" src="./static/img/journal/list/8-opt.jpg" srcset="./static/img/journal/list/8-opt.jpg 1x, ./static/img/journal/list/8@2x-opt.jpg 2x" alt="8">
+                                    </picture>
+                                </a>
+                                <a class="journal-card__link" href="#">Алая вспышка осветила силуэт зазубренного крыла</a>
+                                <div class="journal-card__meta">
+                                    <button class="likes">
+                                        <span class="likes__count">58</span>
+                                    </button>
+                                    <span class="journal-card__delimiter">|</span>
+                                    <span class="journal-card__date">15 апреля 2019</span>
+                                </div>
+                            </div>
+                            <div class="journal-card">
+                                <a href="#" class="journal-card__img">
+                                    <picture>
+                                        <source srcset="./static/img/journal/list/9-opt.webp 1x, ./static/img/journal/list/9@2x-opt.webp 2x">
+                                        <img class="journal-card__img" src="./static/img/journal/list/9-opt.jpg" srcset="./static/img/journal/list/9-opt.jpg 1x, ./static/img/journal/list/9@2x-opt.jpg 2x" alt="9">
+                                    </picture>
+                                </a>
+                                <a class="journal-card__link" href="#">Алая вспышка осветила силуэт зазубренного крыла</a>
+                                <div class="journal-card__meta">
+                                    <button class="likes active">
+                                        <span class="likes__count">58</span>
+                                    </button>
+                                    <span class="journal-card__delimiter">|</span>
+                                    <span class="journal-card__date">15 апреля 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="journal-list__more">
+                    <span>Еще разделы</span>
+                </div>
+
+                <div class="journal-list__tags -more">
+                    <div class="hash-tag -title -gray">
+                        <a class="hash-tag__link" href="#">#Семья</a>
+                        <span class="hash-tag__posts">15 постов</span>
+                    </div>
+                    <div class="hash-tag -title -gray">
+                        <a class="hash-tag__link" href="#">#Всякие мысли</a>
+                        <span class="hash-tag__posts">15 постов</span>
+                    </div>
+                    <div class="hash-tag -title -gray">
+                        <a class="hash-tag__link" href="#">#Мои Хобби</a>
+                        <span class="hash-tag__posts">15 постов</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        //= blocks/footer.html
+    </div>
+    <script src="./static/js/script.min.js"></script>
+</body>
+</html>

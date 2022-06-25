@@ -706,30 +706,7 @@
         top: -87px;
         right: -200px;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-
-        background-color: getcolor(base, white);
-        border-radius: 50%;
-
-        cursor: pointer;
-
-        svg {
-            width: 13px;
-            height: 13px;
-
-            stroke: currentColor;
-            transition: .2s;
-        }
-
-        &:hover {
-            svg {
-                transform: rotate(90deg);
-            }
-        }
+        border: 0;
     }
 
     @media (max-width: $screen-md) {

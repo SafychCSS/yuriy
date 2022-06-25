@@ -1,0 +1,317 @@
+.journal-list {
+    &__heading {
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    &__description {
+        margin-top: 19px;
+
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 44px;
+    }
+
+    &__tags {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        overflow-y: auto;
+
+        &.-more {
+            justify-content: center;
+            gap: 50px;
+        }
+    }
+
+    &__btn-search {
+        position: relative;
+
+        display: flex;
+        margin-left: 19px;
+        padding-left: 32px;
+
+        border-left: 1px solid getcolor(grays, light);
+
+        .btn-search {
+            transform: translateY(3px);
+        }
+    }
+
+    &__wrapper {
+        margin-top: 110px;
+    }
+
+    &__item {
+        & + .journal-list__item {
+            margin-top: 150px;
+        }
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 26px;
+        margin-top: 45px;
+    }
+
+    &__more {
+        position: relative;
+
+        max-width: 890px;
+        margin: 90px auto 50px;
+
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-align: center;
+        color: getcolor(base, secondary);
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            content: '';
+
+            width: 100%;
+            height: 1px;
+
+            background-color: getcolor(grays, secondary);
+
+            transform: translateY(-50%);
+        }
+
+        span {
+            position: relative;
+            z-index: 2;
+
+            padding: 0 34px;
+
+            background-color: getcolor(base, white);
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        &__row {
+            grid-template-columns: 290px 290px 290px;
+            padding-bottom: 10px;
+            overflow-y: auto;
+        }
+
+        &__tags {
+            gap: 16px;
+
+            &.-more {
+                flex-direction: column;
+                gap: 22px;
+                overflow: hidden;
+            }
+        }
+
+        &__btn-search {
+            order: -1;
+            margin-left: 0;
+            padding-left: 0;
+            margin-right: 20px;
+            padding-right: 20px;
+
+            border-left: 0;
+            border-right: 1px solid #e6e6e6;
+        }
+
+        &__wrapper {
+            margin-top: 60px;
+        }
+
+        &__item {
+            & + .journal-list__item {
+                margin-top: 70px;
+            }
+        }
+
+        &__more {
+            font-size: 11px;
+        }
+    }
+
+    @media (max-width: 420px) {
+        &__row {
+            margin-right: -16px;
+        }
+    }
+}
+
+.journal-card {
+    &__img {
+        display: block;
+        aspect-ratio: 4/3;
+
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            border-radius: $radius-sm;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        margin-top: 25px;
+
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    &__meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 15px;
+    }
+
+    &__date {
+        font-size: 15px;
+        font-weight: 600;
+        color: getcolor(grays, primary);
+    }
+
+    &__delimiter {
+        color: getcolor(grays, primary);
+    }
+
+    @media (max-width: $screen-sm) {
+        &__link {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+    }
+}
+
+.form-search {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    padding: 90px 0 110px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background-color: getcolor(base, white);
+    box-shadow: 0 68px 70px rgba(66, 65, 138, 0.11);
+
+    transform: scale(.5);
+    transition: .2s;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+    &__container {
+        display: flex;
+        align-items: flex-end;
+        max-width: 1160px;
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        form {
+            flex-grow: 1;
+        }
+    }
+
+    &__box {
+        position: relative;
+    }
+
+    &__label {
+        display: block;
+
+        font-size: 15px;
+        font-weight: 700;
+        color: getcolor(grays, primary);
+    }
+
+    &__input {
+        width: 100%;
+        padding-right: 130px;
+
+        font-size: 55px;
+        font-weight: 900;
+
+        border: 0;
+        border-bottom: 2px solid getcolor(base, primary);
+
+        @include placeholder {
+            font-size: inherit;
+            font-weight: inherit;
+            color: currentColor;
+            opacity: 1;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        right: 0;
+        bottom: 16px;
+
+        width: auto;
+        min-height: 54px;
+        padding-left: 19px;
+        padding-right: 22px;
+
+        background: getcolor(yellow, primary);
+        border-radius: $radius-xs;
+        box-shadow: none;
+
+        svg {
+            width: 27px;
+            height: 27px;
+            margin-right: 11px;
+
+            transform: translateY(2px);
+        }
+    }
+
+    &__close {
+        margin-left: 32px;
+        margin-bottom: 19px;
+    }
+
+    @media (max-width: $screen-sm) {
+        &__input {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        padding: 28px 0 120px;
+
+        &__input {
+            padding-right: 0;
+        }
+
+        &__btn {
+            right: auto;
+            left: 0;
+            bottom: -80px;
+        }
+    }
+}
