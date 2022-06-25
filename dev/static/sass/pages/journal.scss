@@ -132,6 +132,12 @@
         }
     }
 
+    &__search-result {
+        font-size: 18px;
+        font-weight: 700;
+        color: getcolor(grays, primary);
+    }
+
     @media (max-width: $screen-xs) {
         &__row {
             grid-template-columns: 290px 290px 290px;
