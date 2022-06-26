@@ -116,8 +116,8 @@
 
         &:hover {
             .dropdown {
-                opacity: 1;
-                visibility: visible;
+                opacity: 1 !important;
+                visibility: visible !important;
                 transform: translate(-50%, 0);
             }
         }
@@ -303,8 +303,8 @@
 
         &:hover {
             .dropdown {
-                opacity: 1;
-                visibility: visible;
+                opacity: 1 !important;
+                visibility: visible !important;
                 transform: translateY(0);
             }
         }
