@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./static/css/style.min.css">
+    <link rel="preload" as="font" href="./static/fonts/lato-medium-webfont.woff2">
+    <link rel="preload" as="font" href="./static/fonts/lato-semibold-webfont.woff2">
+    <link rel="preload" as="image" type="image/webp" href="./static/img/login-bg@2x-opt.webp" media="(min-width: 601px)" />
+    <link rel="preload" as="image" type="image/webp" href="./static/img/login-bg-mob@2x-opt.webp" media="(max-width: 600px)" />
     <title>Document</title>
 </head>
 <body>
@@ -16,6 +20,7 @@
     <main class="main login">
         <div class="login__bg">
             <picture>
+                <source srcset="./static/img/login-bg-mob-opt.webp 1x, ./static/img/login-bg-mob@2x-opt.webp 2x" media="(max-width: 600px)">
                 <source srcset="./static/img/login-bg-opt.webp 1x, ./static/img/login-bg@2x-opt.webp 2x">
                 <img width="721" height="882" src="./static/img/login-bg-opt.jpg" srcset="./static/img/login-bg-opt.jpg 1x, ./static/img/login-bg@2x-opt.jpg 2x" alt="Вход">
             </picture>

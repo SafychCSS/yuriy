@@ -510,7 +510,7 @@ h1, h2, h3, h4, h5, h6 {
         }
 
         &::after {
-            top: 1px;
+            top: -2px;
 
             width: 23px;
             height: 23px;
@@ -520,7 +520,7 @@ h1, h2, h3, h4, h5, h6 {
         }
 
         &::before {
-            top: 8px;
+            top: 5px;
             left: 6px;
 
             width: 11px;
