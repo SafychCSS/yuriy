@@ -343,6 +343,7 @@
 
         border: 0;
         border-bottom: 2px solid getcolor(base, primary);
+        border-radius: 0;
 
         @include placeholder {
             font-size: inherit;
