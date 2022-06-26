@@ -374,6 +374,13 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 
+    &.-xs {
+        .hash-tag__link {
+            padding: 5px 10px;
+            font-size: 15px;
+        }
+    }
+
     @media (max-width: $screen-xs) {
         &__link {
             padding: 10px 12px;

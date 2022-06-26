@@ -143,5 +143,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-
+    const postSwiper = document.querySelector('.post-slider__swiper');
+    if (postSwiper) {
+        const swiper = new Swiper(postSwiper, {
+            slidesPerView: 1,
+            autoHeight: true,
+            navigation: {
+                nextEl: '.post-slider__btn.-next',
+                prevEl: '.post-slider__btn.-prev'
+            },
+            pagination: {
+                el: '.post-slider__pagination',
+                clickable: true,
+            },
+        });
+    }
 });
