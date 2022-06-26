@@ -297,9 +297,6 @@
 
     padding: 90px 0 110px;
 
-    opacity: 0;
-    visibility: hidden;
-
     background-color: getcolor(base, white);
     box-shadow: 0 68px 70px rgba(66, 65, 138, 0.11);
 
@@ -307,8 +304,8 @@
     transition: .2s;
 
     &.active {
-        opacity: 1;
-        visibility: visible;
+        opacity: 1 !important;
+        visibility: visible !important;
         transform: scale(1);
     }
 
