@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./static/css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper contacts">
+        //= blocks/header.html
+        <main class="main">
+            <div class="container contacts__container">
+                <div class="contacts__heading">
+                    <h1 class="title title_h1">Cвязаться со мной</h1>
+                    <p class="contacts__text">Моменты из жизни и отдыха. Рассказываю про все, что не связано с работой</p>
+                </div>
+                <div class="contacts__social">
+                    <p class="contacts__social-title">Я в соцсетях:</p>
+                    <div class="contacts__row">
+                        <a class="social-card" href="#">
+                            <span class="social-card__img -fb">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#fb"></use>
+                                </svg>
+                            </span>
+                            <span class="social-card__info">
+                                <span class="social-card__name">Facebook</span>
+                                <span class="social-card__acc">@yuriy_gorlov_fb</span>
+                            </span>
+                        </a>
+                        <a class="social-card" href="#">
+                            <span class="social-card__img -tg">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#tg"></use>
+                                </svg>
+                            </span>
+                            <span class="social-card__info">
+                                <span class="social-card__name">Telegram</span>
+                                <span class="social-card__acc">@yuriy_gorlov_tg</span>
+                            </span>
+                        </a>
+                        <a class="social-card" href="#">
+                            <span class="social-card__img -vk">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#vk"></use>
+                                </svg>
+                            </span>
+                            <span class="social-card__info">
+                                <span class="social-card__name">Вконтакте</span>
+                                <span class="social-card__acc">@yuriy_gorlov_vk</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contacts__form">
+                    <p class="contacts__form-title">Написать мне через форму</p>
+                    <div class="contacts-form">
+                        <form action="/" method="post" name="contacts-form">
+                            <div class="contacts-form__row">
+                                <div class="contacts-form__field">
+                                    <label class="contacts-form__label" for="name">Как вас зовут:</label>
+                                    <div class="contacts-form__input">
+                                        <input class="input" type="text" name="name" id="name" placeholder="Дмитрий">
+                                        <div class="contacts-form__icon -user">
+                                            <svg>
+                                                <use xlink:href="./static/img/sprite.svg#user"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contacts-form__field">
+                                    <label class="contacts-form__label" for="answer">Куда ответить:</label>
+                                    <div class="contacts-form__input">
+                                        <input class="input" type="text" name="answer" id="answer" placeholder="Телеграм: @dmitriy_tg">
+                                        <div class="contacts-form__icon -letter">
+                                            <svg>
+                                                <use xlink:href="./static/img/sprite.svg#letter"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts-form__field -textarea">
+                                <label class="contacts-form__label" for="message">Сообщение:</label>
+                                <textarea class="input contacts-form__textarea" name="message" id="message" placeholder="Текст сообщения"></textarea>
+                            </div>
+
+                            <div class="contacts-form__btn">
+                                <button class="btn">Отправить</button>
+                            </div>
+                            <div class="contacts-form__checkbox">
+                                <div class="checkbox">
+                                    <input class="visibility-hidden" checked id="privacy" type="checkbox">
+                                    <label class="checkbox__label" for="privacy">Соглашаюсь на обработку персональных данных</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        //= blocks/footer.html
+    </div>
+    <script src="./static/js/script.min.js"></script>
+</body>
+</html>

@@ -298,7 +298,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-right: 24px;
 
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 700;
 
     background: getcolor(yellow, primary);
     box-shadow: 0 10px 28px rgba(255, 221, 131, 0.55);
@@ -486,6 +486,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .checkbox {
+    display: inline-block;
+    text-align: left;
+
     &__label {
         position: relative;
 
@@ -494,6 +497,7 @@ h1, h2, h3, h4, h5, h6 {
 
         font-size: 15px;
         font-weight: 600;
+        line-height: 1.2;
 
         cursor: pointer;
 
@@ -533,6 +537,12 @@ h1, h2, h3, h4, h5, h6 {
     input:checked + .checkbox__label {
         &::before {
             opacity: 1;
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        &__label {
+            font-size: 14px;
         }
     }
 }
